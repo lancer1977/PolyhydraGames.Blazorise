@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PolyhydraGames.BlazorComponents", "PolyhydraGames.BlazorComponents.csproj", "{3B98FC3E-6B38-4596-99AC-4C1726D98C10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PolyhydraGames.BlazorComponents", "PolyhydraGames.BlazorComponents.csproj", "{B4F1BEF9-3132-478E-AF54-39FFCB51939F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3B98FC3E-6B38-4596-99AC-4C1726D98C10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B98FC3E-6B38-4596-99AC-4C1726D98C10}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3B98FC3E-6B38-4596-99AC-4C1726D98C10}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3B98FC3E-6B38-4596-99AC-4C1726D98C10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4F1BEF9-3132-478E-AF54-39FFCB51939F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4F1BEF9-3132-478E-AF54-39FFCB51939F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4F1BEF9-3132-478E-AF54-39FFCB51939F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4F1BEF9-3132-478E-AF54-39FFCB51939F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {2F2DAA52-81E3-4979-92A1-CCA6EDAF56DC}
+		SolutionGuid = {8212EFD4-CEDD-4D26-8235-6D31FD48A722}
 	EndGlobalSection
 EndGlobal

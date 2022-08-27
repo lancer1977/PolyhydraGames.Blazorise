@@ -1,5 +1,4 @@
-﻿@using System.Windows.Input
-@using global::Blazorise
+﻿@using System.Windows.Input  
 @implements IDisposable; 
 <Modal @ref="_modal">
     <ModalContent Centered>
@@ -10,8 +9,7 @@
         <ModalBody>
         
             <Text>@Message</Text>
-            <TextEdit Visibility="@(Type == DialogRequestType.Prompt ? Visibility.Visible : Visibility.Invisible)"
-                      @bind-Text="@Value"></TextEdit>
+            <TextEdit Visibility="@(Type == DialogRequestType.Prompt ? Visibility.Visible : Visibility.Invisible)" @bind-Text="@Value"></TextEdit>
             <Button Command="PositiveCommand">@PositiveButton</Button>
             <Button Command="NegativeCommand">@NegativeButton</Button>
 
