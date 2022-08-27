@@ -20,7 +20,7 @@
  </dependencies>
   </metadata>
     <files>  
-      <file src=".\bin\Release\netstandard2.0\PolyhydraGames.Blazorise*" target="lib\net6" /> 
+      <file src=".\PolyhydraGames.Blazorise\bin\Release\net6.0\*" target="lib\net6" /> 
  
     </files>
 </package>
