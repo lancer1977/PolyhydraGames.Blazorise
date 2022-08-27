@@ -1,5 +1,4 @@
 ﻿@using System.Windows.Input
-@using PolyhydraGames.BlazorComponents;
 @using global::Blazorise
 @implements IDisposable; 
 <Modal @ref="_modal">
@@ -19,8 +18,7 @@
         </ModalBody>
 
     </ModalContent >
-</Modal>
-<Text></Text>
+</Modal> 
 @code {
     public Modal _modal;
     private IDisposable _dispose;
