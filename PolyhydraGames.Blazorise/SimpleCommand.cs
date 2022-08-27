@@ -1,6 +1,6 @@
 ﻿using System.Windows.Input;
 
-namespace PolyhydraGames.Blazorise;
+namespace PolyhydraGames.BlazorComponents;
 
 public class SimpleCommand : ICommand
 {

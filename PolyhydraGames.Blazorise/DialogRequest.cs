@@ -1,4 +1,4 @@
-﻿namespace PolyhydraGames.Blazorise;
+﻿namespace PolyhydraGames.BlazorComponents;
 
 public class DialogRequest
 {
