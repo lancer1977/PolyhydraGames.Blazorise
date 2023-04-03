@@ -1,18 +1,35 @@
 ﻿using System.Reactive.Linq;
 using System.Reactive.Subjects;
+using PolyhydraGames.Core.Interfaces;
 
 namespace PolyhydraGames.BlazorComponents;
 
+public class DialogResult<T> : IDialogResult<T>
+{
+    public DialogResult()
+    {
+        Ok = false;
+    }
+    public DialogResult( T value )
+    {
+        Result = value;
+        Ok = true;
+    }
+    public T Result { get; set; }
+    public bool Ok { get; set; }
+}
 public class DialogService : IDialogService
 {
     public IObservable<DialogRequest> OnDialogRequest { get; }
-    private Subject<DialogRequest> DialogRequest { get; } = new Subject<DialogRequest>();
+    public Subject<DialogRequest> DialogResultRequest { get; } = new Subject<DialogRequest>();
     public DialogService()
     {
-        OnDialogRequest = DialogRequest.AsObservable();
+        OnDialogRequest = DialogResultRequest.AsObservable();
     }
 
-    public async Task Alert(string message, string title)
+   
+
+    public async Task NotificationAsync( string message, string title = "", string button = "OK" )
     {
         var request = new DialogRequest()
         {
@@ -22,38 +39,77 @@ public class DialogService : IDialogService
             Type = DialogRequestType.Alert
 
         };
-        DialogRequest.OnNext(request);
-        await request.TCS.Task;
+        DialogResultRequest.OnNext( request );
+        await request.AsTask.Task;
         //await _helper.Alert(title + ": " + message);
     }
 
-    public async Task<bool?> Confirm(string message, string title, string confirmButton, string denyButton)
+    public async Task<IDialogResult<int>> GetIntAsync( string title, string message = "", int def = 0 )
     {
         var request = new DialogRequest()
         {
             Message = message,
             Title = title,
-            PositiveButton = confirmButton,
-            NegativeButton = denyButton,
+            PositiveButton = "Ok",
+            NegativeButton = "Cancel",
             Type = DialogRequestType.Confirm
 
         };
-        DialogRequest.OnNext(request);
-        return await request.TCSBool.Task;
+        DialogResultRequest.OnNext( request );
+        return await request.AsInt.Task;
     }
 
-    public async Task<string?> Prompt(string message, string title, string confirmButton, string cancelButton)
+    public async Task<IDialogResult<int>> GetIntAsync( string title, int low, int high, int @default = 0 )
+    {
+        var request = new DialogRequest()
+        { 
+            Title = title,
+            PositiveButton = "Ok",
+            NegativeButton = "Cancel",
+            Type = DialogRequestType.Confirm
+
+        };
+        DialogResultRequest.OnNext( request );
+        return await request.AsInt.Task;
+    }
+
+    public async Task<IDialogResult<bool>> GetBooleanAsync( string message, string title, string confirmButton = "OK", string labelCancel = "Cancel" )
     {
         var request = new DialogRequest()
         {
             Message = message,
             Title = title,
             PositiveButton = confirmButton,
-            NegativeButton = cancelButton,
-            Type = DialogRequestType.Prompt
+            NegativeButton = labelCancel,
+            Type = DialogRequestType.Confirm
 
         };
-        DialogRequest.OnNext(request);
-        return await request.TCSString.Task;
+        DialogResultRequest.OnNext( request);
+        return  await request.AsBool.Task;
+    }
+
+    public async Task<IDialogResult<string>> GetStringAsync( string message, string title, string labelOk = "OK", string labelCancel = "Cancel" )
+    {
+        var request = new DialogRequest()
+        {
+            Message = message,
+            Title = title,
+            PositiveButton = labelOk,
+            NegativeButton = labelCancel,
+            Type = DialogRequestType.Confirm
+
+        };
+        DialogResultRequest.OnNext( request );
+        return await request.AsString.Task;
+    }
+
+    public async Task<IDialogResult<T>> InputBoxAsync<T>( string title, IEnumerable<T> items )
+    {
+        throw new NotImplementedException();
+    }
+
+    public async Task ToastAsync( string message )
+    {
+        await this.NotificationAsync( message );
     }
 }

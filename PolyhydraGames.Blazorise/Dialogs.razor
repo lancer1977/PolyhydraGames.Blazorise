@@ -27,7 +27,7 @@
     public string Value { get; set; }
     public string PositiveButton { get; set; }
     public string NegativeButton { get; set; }
-    [Inject] public IDialogService DialogService { get; set; }
+    [Inject] public DialogService DialogService { get; set; }
     public ICommand PositiveCommand { get; set; }
     public ICommand NegativeCommand { get; set; }
     public DialogRequest Request { get; set; }
