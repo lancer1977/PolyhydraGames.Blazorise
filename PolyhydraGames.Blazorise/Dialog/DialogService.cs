@@ -2,22 +2,8 @@
 using System.Reactive.Subjects;
 using PolyhydraGames.Core.Interfaces;
 
-namespace PolyhydraGames.BlazorComponents;
+namespace PolyhydraGames.BlazorComponents.Dialog;
 
-public class DialogResult<T> : IDialogResult<T>
-{
-    public DialogResult()
-    {
-        Ok = false;
-    }
-    public DialogResult( T value )
-    {
-        Result = value;
-        Ok = true;
-    }
-    public T Result { get; set; }
-    public bool Ok { get; set; }
-}
 public class DialogService : IDialogService
 {
     public IObservable<DialogRequest> OnDialogRequest { get; }
@@ -27,7 +13,7 @@ public class DialogService : IDialogService
         OnDialogRequest = DialogResultRequest.AsObservable();
     }
 
-   
+
 
     public async Task NotificationAsync( string message, string title = "", string button = "OK" )
     {
@@ -62,7 +48,7 @@ public class DialogService : IDialogService
     public async Task<IDialogResult<int>> GetIntAsync( string title, int low, int high, int @default = 0 )
     {
         var request = new DialogRequest()
-        { 
+        {
             Title = title,
             PositiveButton = "Ok",
             NegativeButton = "Cancel",
@@ -84,8 +70,8 @@ public class DialogService : IDialogService
             Type = DialogRequestType.Confirm
 
         };
-        DialogResultRequest.OnNext( request);
-        return  await request.AsBool.Task;
+        DialogResultRequest.OnNext( request );
+        return await request.AsBool.Task;
     }
 
     public async Task<IDialogResult<string>> GetStringAsync( string message, string title, string labelOk = "OK", string labelCancel = "Cancel" )
@@ -110,6 +96,6 @@ public class DialogService : IDialogService
 
     public async Task ToastAsync( string message )
     {
-        await this.NotificationAsync( message );
+        await NotificationAsync( message );
     }
 }

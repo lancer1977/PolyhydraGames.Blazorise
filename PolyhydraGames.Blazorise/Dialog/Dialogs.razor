@@ -1,4 +1,5 @@
 ﻿@using System.Windows.Input  
+@using ReactiveUI
 @implements IDisposable; 
 <Modal @ref="_modal">
     <ModalContent Centered>
@@ -34,8 +35,8 @@
 
     public Dialogs( )
     { 
-        PositiveCommand = new SimpleCommand(PositiveClicked);
-        NegativeCommand = new SimpleCommand(NegativeClicked);
+        PositiveCommand = ReactiveCommand.Create(PositiveClicked);
+        NegativeCommand = ReactiveCommand.Create(NegativeClicked);
     }
 
     protected override async Task OnInitializedAsync()

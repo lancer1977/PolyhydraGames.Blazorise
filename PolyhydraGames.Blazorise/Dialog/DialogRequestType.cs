@@ -1,4 +1,4 @@
-﻿namespace PolyhydraGames.BlazorComponents;
+﻿namespace PolyhydraGames.BlazorComponents.Dialog;
 
 public enum DialogRequestType
 {

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using PolyhydraGames.BlazorComponents.Dialog;
 using PolyhydraGames.Core.Interfaces;
 
 
@@ -15,8 +16,8 @@ namespace PolyhydraGames.BlazorComponents
         /// <param name="serviceCollection"></param>
         /// <param name="configureOptions"></param>
         /// <returns></returns>
-        public static IServiceCollection AddBlazorComponents( this IServiceCollection serviceCollection  )
-        {  
+        public static IServiceCollection AddBlazorComponents( this IServiceCollection serviceCollection )
+        {
             serviceCollection.AddSingleton<IDialogService, DialogService>();
             return serviceCollection;
         }
