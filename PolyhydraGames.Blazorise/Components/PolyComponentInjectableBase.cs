@@ -1,11 +1,10 @@
 ﻿using System.ComponentModel;
 using Microsoft.AspNetCore.Components;
-using PolyhydraGames.Core.Interfaces;
 
 namespace PolyhydraGames.BlazorComponents.Components;
 
 public class PolyComponentInjectableBase<T> : PolyComponentBase<T>
-    where T : class, INotifyPropertyChanged, IViewModelAsync
+    where T : class, INotifyPropertyChanged
 {
     private T _viewModel;
     /// <inheritdoc />
