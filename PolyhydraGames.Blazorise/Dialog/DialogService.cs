@@ -91,7 +91,23 @@ public class DialogService : IDialogService
 
     public async Task<IDialogResult<T>> InputBoxAsync<T>( string title, IEnumerable<T> items )
     {
-        throw new NotImplementedException();
+        var request = new DialogRequest()
+        {
+            Items = items.Cast<object>().ToList(),
+            //Message = message,
+            Title = title, 
+            Type = DialogRequestType.Selection
+
+        };
+        DialogResultRequest.OnNext( request );
+        var result = await request.AsSelection.Task;
+        var resultOfT = new DialogResult<T>
+        {
+            Result = (T) result.Result,
+            Ok = result.Ok
+        };
+
+        return resultOfT;
     }
 
     public async Task ToastAsync( string message )

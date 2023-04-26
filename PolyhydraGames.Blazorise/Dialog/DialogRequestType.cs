@@ -5,5 +5,6 @@ public enum DialogRequestType
     Alert,
     Confirm,
     Prompt,
-    PromptInt
+    PromptInt,
+    Selection
 }

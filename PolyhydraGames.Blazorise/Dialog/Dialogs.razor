@@ -1,5 +1,6 @@
 ﻿@using System.Windows.Input  
 @using ReactiveUI
+
 @implements IDisposable; 
 <Modal @ref="_modal">
     <ModalContent Centered>
@@ -11,6 +12,15 @@
         
             <Text>@Message</Text>
             <TextEdit Visibility="@(Type == DialogRequestType.Prompt ? Visibility.Visible : Visibility.Invisible)" @bind-Text="@Value"></TextEdit>
+            @if (Items?.Any() ?? false)
+{
+                    <ul>
+                        @foreach(var item in Items)
+                                {
+                                <Button Command="PositiveCommand" CommandParameter="item">@item.ToString()</Button>
+                                }
+                    </ul>
+}
             <Button Command="PositiveCommand">@PositiveButton</Button>
             <Button Command="NegativeCommand">@NegativeButton</Button>
 
@@ -28,13 +38,14 @@
     public string Value { get; set; }
     public string PositiveButton { get; set; }
     public string NegativeButton { get; set; }
+    public List<object> Items { get; set; }
     [Inject] public DialogService DialogService { get; set; }
     public ICommand PositiveCommand { get; set; }
     public ICommand NegativeCommand { get; set; }
     public DialogRequest Request { get; set; }
 
     public Dialogs( )
-    { 
+    {
         PositiveCommand = ReactiveCommand.Create(PositiveClicked);
         NegativeCommand = ReactiveCommand.Create(NegativeClicked);
     }
@@ -59,6 +70,12 @@
             case DialogRequestType.Prompt:
                 Request.SetResult(string.Empty);
                 break;
+            case DialogRequestType.PromptInt:
+                Request.SetResult(null);
+                break;
+            case DialogRequestType.Selection:
+                Request.SetSelection(string.Empty);
+                break;
             default:
                 throw new ArgumentOutOfRangeException();
         }
@@ -78,6 +95,12 @@
             case DialogRequestType.Prompt:
                 Request.SetResult(Value);
                 break;
+            case DialogRequestType.Selection:
+                Request.SetResult(Value);
+                break;
+            case DialogRequestType.PromptInt:
+                Request.SetResult(int.Parse(Value));
+                break;
             default:
                 throw new ArgumentOutOfRangeException();
         }
@@ -85,15 +108,17 @@
     }
 
     private async void OnModalRequested(DialogRequest request)
-    { 
-         Title = request.Title;
+    {
+        Title = request.Title;
 
 
         Type = request.Type;
         Message = request.Message;
         PositiveButton = request.PositiveButton;
         NegativeButton = request.NegativeButton;
+        Items = request.Items;
         Request = request;
+
         await _modal.Show();
     }
 
@@ -105,15 +130,16 @@
 
     public void CancelDialog()
     {   Request.Cancel();
- 
-    }
-        private Task OnModalClosing(ModalClosingEventArgs e)
-        {
-            if (e.CloseReason != CloseReason.UserClosing)
-            {
-                CancelDialog();
-            }
-            return Task.CompletedTask;
-        }
 
+    }
+    private Task OnModalClosing(ModalClosingEventArgs e)
+    {
+        if (e.CloseReason != CloseReason.UserClosing)
+        {
+            CancelDialog();
+        }
+        return Task.CompletedTask;
+    }
+
+}
 }
