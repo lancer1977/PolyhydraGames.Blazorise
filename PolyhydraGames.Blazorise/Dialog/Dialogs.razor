@@ -10,30 +10,29 @@
             <CloseButton onclicked="@CancelDialog" />
         </ModalHeader>
         <ModalBody>
-        
-            <Text>@Message</Text>
-            <TextEdit Visibility="@(Type == DialogRequestType.Prompt ? Visibility.Visible : Visibility.Invisible)" @bind-Text="@Value"></TextEdit>
-            @if (Items?.Any() ?? false)
-            { <Div>
-                  <Column>
-                                          @foreach(var item in Items)
-                                                  {<Button Command="SelectionCommand" CommandParameter="item"  Style="border: 1px solid black;">@item.ToString()</Button>}
-                      </Column>
-              </Div>
-    
-}
-          
-            <Button Command="PositiveCommand">@PositiveButton</Button>
-            <Button Command="NegativeCommand">@NegativeButton</Button>
-
-        </ModalBody>
-
+            @if (Type == DialogRequestType.Selection)
+            {  <ListGroup Flush> 
+                        @foreach (var item in Items)
+                        {
+                            <ListGroupItem  @onclick="()=>SelectionCommand.Execute(item)">
+                                @item.ToString() 
+                            </ListGroupItem>
+                        } 
+                    </ListGroup> 
+            }
+            else
+            {
+                <Text>@Message</Text>
+                <TextEdit Visibility="@(Type == DialogRequestType.Prompt ? Visibility.Visible : Visibility.Invisible)" @bind-Text="@Value"></TextEdit> 
+                <Button Command="PositiveCommand">@PositiveButton</Button>
+                <Button Command="NegativeCommand">@NegativeButton</Button> 
+            } 
+        </ModalBody> 
     </ModalContent >
 </Modal> 
 @code {
     public Modal _modal;
     private IDisposable _dispose;
-
     public DialogRequestType Type { get; set; }
     public string Title { get; set; }
     public string Message { get; set; }
