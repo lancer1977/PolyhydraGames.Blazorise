@@ -1,8 +1,9 @@
 ﻿@using System.Windows.Input  
 @using ReactiveUI
+@using System
 
 @implements IDisposable; 
-<Modal @ref="_modal">
+<Modal @ref="_modal" Closing="OnModalClosing">
     <ModalContent Centered>
         <ModalHeader>
             <ModalTitle>@Title</ModalTitle> 
@@ -13,14 +14,15 @@
             <Text>@Message</Text>
             <TextEdit Visibility="@(Type == DialogRequestType.Prompt ? Visibility.Visible : Visibility.Invisible)" @bind-Text="@Value"></TextEdit>
             @if (Items?.Any() ?? false)
-{
-                    <ul>
-                        @foreach(var item in Items)
-                                {
-                                <Button Command="PositiveCommand" CommandParameter="item">@item.ToString()</Button>
-                                }
-                    </ul>
+            { <Div>
+                  <Column>
+                                          @foreach(var item in Items)
+                                                  {<Button Command="SelectionCommand" CommandParameter="item"  Style="border: 1px solid black;">@item.ToString()</Button>}
+                      </Column>
+              </Div>
+    
 }
+          
             <Button Command="PositiveCommand">@PositiveButton</Button>
             <Button Command="NegativeCommand">@NegativeButton</Button>
 
@@ -35,26 +37,30 @@
     public DialogRequestType Type { get; set; }
     public string Title { get; set; }
     public string Message { get; set; }
-    public string Value { get; set; }
+    public string Value { get; set; } 
     public string PositiveButton { get; set; }
     public string NegativeButton { get; set; }
     public List<object> Items { get; set; }
-    [Inject] public DialogService DialogService { get; set; }
+    [Inject] private IDialogService _dialogService { get; set; }
     public ICommand PositiveCommand { get; set; }
     public ICommand NegativeCommand { get; set; }
+    public ICommand SelectionCommand { get; set; }
     public DialogRequest Request { get; set; }
 
     public Dialogs( )
     {
         PositiveCommand = ReactiveCommand.Create(PositiveClicked);
         NegativeCommand = ReactiveCommand.Create(NegativeClicked);
+        SelectionCommand = ReactiveCommand.Create<object>(x=>ObjectSelected(x)); 
+
     }
 
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
         if (_dispose != null) _dispose.Dispose();
-        _dispose = DialogService.OnDialogRequest.Subscribe(OnModalRequested);
+        var service = _dialogService as DialogService;
+        _dispose = service.OnDialogRequest.Subscribe(OnModalRequested);
     }
 
     private async Task NegativeClicked()
@@ -82,6 +88,11 @@
         await _modal.Hide();
     }
 
+    private async Task ObjectSelected(object item)
+    {
+        Request.SetSelection(item);
+        await _modal.Hide();
+    }
     private async Task PositiveClicked()
     {
         switch (Type)

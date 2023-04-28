@@ -1,4 +1,5 @@
-﻿using System.Reactive.Linq;
+﻿using System.Diagnostics;
+using System.Reactive.Linq;
 using System.Reactive.Subjects;
 using PolyhydraGames.Core.Interfaces;
 
@@ -11,6 +12,14 @@ public class DialogService : IDialogService
     public DialogService()
     {
         OnDialogRequest = DialogResultRequest.AsObservable();
+#if DEBUG
+
+        OnDialogRequest.Subscribe( x =>
+        {
+            Debug.WriteLine( x.Message );
+        } );
+        
+#endif
     }
 
 

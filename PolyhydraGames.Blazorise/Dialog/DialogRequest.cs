@@ -44,15 +44,15 @@ public class DialogRequest
                     break;
                 case DialogRequestType.Selection:
                     AsSelection = new TaskCompletionSource<DialogResult<object>>();
-                    Task = AsString.Task;
-                        break;
+                    Task = AsSelection.Task;
+                    break;
                 default:
                     throw new ArgumentOutOfRangeException( nameof( value ), value, null );
             }
         }
     }
      
-    public void SetSelection( string value )
+    public void SetSelection( object value )
     {
         AsSelection.SetResult( new DialogResult<object>( value ) );
     }

@@ -20,7 +20,9 @@ public abstract class PolyComponentBase<T> : ComponentBase, IViewFor<T>, INotify
     private readonly Subject<Unit> _initSubject = new();
     [SuppressMessage( "Design", "CA2213: Dispose object", Justification = "Used for deactivation." )]
     private readonly Subject<Unit> _deactivateSubject = new();
-    private readonly CompositeDisposable _compositeDisposable = new();
+    protected readonly CompositeDisposable CompositeDisposable = new();
+    
+    
     public ICommand RefreshCommand { get; set; }
 
     public PolyComponentBase()
@@ -91,7 +93,7 @@ public abstract class PolyComponentBase<T> : ComponentBase, IViewFor<T>, INotify
                 {
                     InvokeAsync( StateHasChanged );
                 } )
-                .DisposeWith( _compositeDisposable );
+                .DisposeWith( CompositeDisposable );
 
             viewModelChanged
                 .WhereNotNull()
@@ -109,7 +111,7 @@ public abstract class PolyComponentBase<T> : ComponentBase, IViewFor<T>, INotify
                     Debug.WriteLine( "StateChanged" );
                     InvokeAsync( StateHasChanged );
                 } )
-                .DisposeWith( _compositeDisposable );
+                .DisposeWith( CompositeDisposable );
 
         }
 
@@ -133,7 +135,7 @@ public abstract class PolyComponentBase<T> : ComponentBase, IViewFor<T>, INotify
             if ( disposing )
             {
                 _initSubject.Dispose();
-                _compositeDisposable.Dispose();
+                CompositeDisposable.Dispose();
                 _deactivateSubject.OnNext( Unit.Default );
             }
 
