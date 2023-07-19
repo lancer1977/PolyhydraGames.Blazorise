@@ -31,6 +31,7 @@
     </ModalContent >
 </Modal> 
 @code {
+    private bool _waitingForUserSelection;
     public Modal _modal;
     private IDisposable _dispose;
     public DialogRequestType Type { get; set; }
@@ -84,13 +85,13 @@
             default:
                 throw new ArgumentOutOfRangeException();
         }
-        await _modal.Hide();
+        await DismissModalOnSuccess();
     }
 
     private async Task ObjectSelected(object item)
     {
         Request.SetSelection(item);
-        await _modal.Hide();
+        await DismissModalOnSuccess();
     }
     private async Task PositiveClicked()
     {
@@ -114,14 +115,19 @@
             default:
                 throw new ArgumentOutOfRangeException();
         }
+        await DismissModalOnSuccess();
+    }
+
+    private async Task DismissModalOnSuccess()
+    {
+        _waitingForUserSelection = false;
         await _modal.Hide();
     }
 
     private async void OnModalRequested(DialogRequest request)
     {
+        _waitingForUserSelection = true;
         Title = request.Title;
-
-
         Type = request.Type;
         Message = request.Message;
         PositiveButton = request.PositiveButton;
@@ -140,11 +146,11 @@
 
     public void CancelDialog()
     {   Request.Cancel();
-
+        _waitingForUserSelection = false;
     }
     private Task OnModalClosing(ModalClosingEventArgs e)
     {
-        if (e.CloseReason != CloseReason.UserClosing)
+        if (_waitingForUserSelection)
         {
             CancelDialog();
         }
