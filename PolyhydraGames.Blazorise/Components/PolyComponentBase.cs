@@ -2,19 +2,18 @@
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Reactive;
-using System.Reactive.Disposables;
 using System.Reactive.Linq;
 using System.Reactive.Subjects;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
-using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Logging;
 using PolyhydraGames.Core.Interfaces;
 using ReactiveUI;
-
-namespace PolyhydraGames.BlazorComponents.Components;
 using System.Reactive.Disposables;
 using Microsoft.AspNetCore.Components;
+
+namespace PolyhydraGames.BlazorComponents.Components;
+
 
 public abstract class PolyComponentBase<T> : ComponentBase, IViewFor<T>, INotifyPropertyChanged, ICanActivate, IDisposable
     where T : class, INotifyPropertyChanged
