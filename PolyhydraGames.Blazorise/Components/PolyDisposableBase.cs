@@ -4,19 +4,14 @@ using PolyhydraGames.Core.Interfaces;
 
 namespace PolyhydraGames.BlazorComponents.Components;
 
-public abstract class PolyDisposableBase : ComponentBase, ICompositeDisposable
+public abstract class PolyDisposableBase : ComponentBase, IDisposable
 {
-    public PolyDisposableBase()
-    {
-        Disposables = new CompositeDisposable();
-    }
+
+
+    public CompositeDisposable Disposables { get;   } = new CompositeDisposable();
+
     public void Dispose()
     {
-        ( Disposables as CompositeDisposable ).Dispose();
-
+        Disposables.Dispose();
     }
-
-    public ICollection<IDisposable> Disposables { get; init; }
-
-
 }
