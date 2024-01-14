@@ -13,6 +13,8 @@ using PolyhydraGames.Core.Interfaces;
 using ReactiveUI;
 
 namespace PolyhydraGames.BlazorComponents.Components;
+using System.Reactive.Disposables;
+using Microsoft.AspNetCore.Components;
 
 public abstract class PolyComponentBase<T> : ComponentBase, IViewFor<T>, INotifyPropertyChanged, ICanActivate, IDisposable
     where T : class, INotifyPropertyChanged
