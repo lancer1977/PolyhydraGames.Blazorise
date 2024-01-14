@@ -9,7 +9,6 @@ using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Logging;
-using PolyhydraGames.BlazorComponents.ViewModels;
 using PolyhydraGames.Core.Interfaces;
 using ReactiveUI;
 
