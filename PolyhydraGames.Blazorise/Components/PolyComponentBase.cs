@@ -8,6 +8,8 @@ using System.Reactive.Subjects;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using Microsoft.AspNetCore.Components;
+using Microsoft.Extensions.Logging;
+using PolyhydraGames.BlazorComponents.ViewModels;
 using PolyhydraGames.Core.Interfaces;
 using ReactiveUI;
 
@@ -17,6 +19,7 @@ public abstract class PolyComponentBase<T> : ComponentBase, IViewFor<T>, INotify
     where T : class, INotifyPropertyChanged
 {
 
+    [Inject] public ILogger<PolyComponentBase<T>> Log { get; set; }
     private readonly Subject<Unit> _initSubject = new();
     [SuppressMessage( "Design", "CA2213: Dispose object", Justification = "Used for deactivation." )]
     private readonly Subject<Unit> _deactivateSubject = new();
@@ -68,13 +71,6 @@ public abstract class PolyComponentBase<T> : ComponentBase, IViewFor<T>, INotify
         await base.OnInitializedAsync();
 
     }
-
-    protected override async Task OnParametersSetAsync()
-    {
-        await base.OnParametersSetAsync();
-        if ( ViewModel is IViewModelAsync vm )
-            await vm.StartAsync();
-    }
     
     /// <inheritdoc/>
     protected override void OnAfterRender( bool firstRender )
@@ -116,6 +112,15 @@ public abstract class PolyComponentBase<T> : ComponentBase, IViewFor<T>, INotify
         }
 
         base.OnAfterRender( firstRender );
+    }
+
+    protected override async Task OnAfterRenderAsync( bool firstRender )
+    {
+        await base.OnAfterRenderAsync( firstRender );
+        if ( firstRender && ViewModel is IViewModelAsync vm )
+        {
+            await vm.StartAsync();
+        }
     }
 
     /// <summary>
