@@ -10,10 +10,14 @@ using Microsoft.Extensions.Logging;
 using PolyhydraGames.Core.Interfaces;
 using ReactiveUI;
 using System.Reactive.Disposables;
-using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components; 
 
 namespace PolyhydraGames.BlazorComponents.Components;
 
+//public abstract class PolyComponentBase : PolyComponentBase<IViewModelAsync>
+//{
+//    public abstract override IViewModelAsync ViewModel { get; set; }
+//}
 
 public abstract class PolyComponentBase<T> : ComponentBase, IViewFor<T>, INotifyPropertyChanged, ICanActivate, IDisposable
     where T : class, INotifyPropertyChanged
@@ -68,51 +72,9 @@ public abstract class PolyComponentBase<T> : ComponentBase, IViewFor<T>, INotify
     protected override async Task OnInitializedAsync()
     {
         _initSubject.OnNext( Unit.Default );
-        await base.OnInitializedAsync();
-
+        Registrations();
     }
-    
-    /// <inheritdoc/>
-    protected override void OnAfterRender( bool firstRender )
-    {
-        if ( firstRender )
-        {
-            // The following subscriptions are here because if they are done in OnInitialized, they conflict with certain JavaScript frameworks.
-            var viewModelChanged =
-                this.WhenAnyValue( x => x.ViewModel )
-                    .Where( x => x is not null )
-                    .Publish()
-                    .RefCount( 2 );
-
-            viewModelChanged
-                .Subscribe( _ =>
-                {
-                    InvokeAsync( StateHasChanged );
-                } )
-                .DisposeWith( CompositeDisposable );
-
-            viewModelChanged
-                .WhereNotNull()
-                .Select( x => Observable.FromEvent<PropertyChangedEventHandler?, Unit>(
-                    eventHandler =>
-                    {
-                        void Handler( object? sender, PropertyChangedEventArgs e ) => eventHandler( Unit.Default );
-                        return Handler;
-                    },
-                    eh => x.PropertyChanged += eh,
-                    eh => x.PropertyChanged -= eh ) )
-                .Switch()
-                .Subscribe( _ =>
-                {
-                    Debug.WriteLine( "StateChanged" );
-                    InvokeAsync( StateHasChanged );
-                } )
-                .DisposeWith( CompositeDisposable );
-
-        }
-
-        base.OnAfterRender( firstRender );
-    }
+     
 
     protected override async Task OnAfterRenderAsync( bool firstRender )
     {
@@ -135,22 +97,46 @@ public abstract class PolyComponentBase<T> : ComponentBase, IViewFor<T>, INotify
     /// <param name="disposing">If it is getting called by the Dispose() method rather than a finalizer.</param>
     protected virtual void Dispose( bool disposing )
     {
-        if ( !_disposedValue )
-        {
-            if ( disposing )
-            {
-                _initSubject.Dispose();
-                CompositeDisposable.Dispose();
-                _deactivateSubject.OnNext( Unit.Default );
-            }
+        if ( _disposedValue ) return;
 
-            _disposedValue = true;
+        if ( disposing )
+        {
+            _initSubject.Dispose();
+            CompositeDisposable.Dispose();
+            _deactivateSubject.OnNext( Unit.Default );
         }
+
+        _disposedValue = true;
+    }
+
+
+    private void Registrations()
+    {
+        var viewModelChanged =
+            this.WhenAnyValue( x => x.ViewModel )
+                .Where( x => x is not null )
+                .Publish()
+                .RefCount( 2 );
+
+        viewModelChanged
+            .Select( async _ => await InvokeAsync( StateHasChanged ) )
+        .Subscribe()
+            .DisposeWith( CompositeDisposable );
+
+        ObservableMixins.WhereNotNull( viewModelChanged )
+            .Select( x => Observable.FromEvent<PropertyChangedEventHandler?, Unit>( eventHandler =>
+            {
+                void Handler( object? sender, PropertyChangedEventArgs e ) => eventHandler( Unit.Default );
+                return Handler;
+            }, eh => x.PropertyChanged += eh, eh => x.PropertyChanged -= eh ) )
+            .Switch().Select( async ( _ ) =>
+            {
+                Debug.WriteLine( "StateChanged" );
+                await InvokeAsync( StateHasChanged );
+            } )
+        .Subscribe()
+            .DisposeWith( CompositeDisposable );
     }
 
 }
 
-public abstract class PolyComponentBase : PolyComponentBase<IViewModelAsync>
-{
-    public abstract override IViewModelAsync ViewModel { get; set; }
-}
