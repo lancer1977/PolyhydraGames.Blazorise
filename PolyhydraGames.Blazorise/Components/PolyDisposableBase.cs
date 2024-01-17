@@ -1,6 +1,5 @@
 ﻿using System.Reactive.Disposables;
 using Microsoft.AspNetCore.Components;
-using PolyhydraGames.Core.Interfaces;
 
 namespace PolyhydraGames.BlazorComponents.Components;
 
