@@ -1,4 +1,4 @@
-﻿namespace PolyhydraGames.Blazor.Data.CurrentPage;
+﻿namespace PolyhydraGames.BlazorComponents.CurrentPage;
 
 public interface ICurrentPage
 {
