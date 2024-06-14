@@ -1,0 +1,121 @@
+﻿@using System.Windows.Input
+@using PolyhydraGames.BlazorComponents.Dialog
+@using ReactiveUI
+@implements IDisposable; 
+<Modal @ref="_modal">
+    <ModalContent Centered>
+        <ModalHeader>
+            <ModalTitle>@Title</ModalTitle> 
+            <CloseButton onclicked="@CancelDialog" />
+        </ModalHeader>
+        <ModalBody>
+        
+            <Text>@Message</Text>
+            <TextEdit Visibility="@(Type == DialogRequestType.Prompt ? Visibility.Visible : Visibility.Invisible)"
+                      @bind-Text="@Value"></TextEdit>
+            <Button Command="PositiveCommand">@PositiveButton</Button>
+            <Button Command="NegativeCommand">@NegativeButton</Button>
+
+        </ModalBody>
+
+    </ModalContent >
+</Modal> 
+@code {
+    public Modal _modal;
+    private IDisposable _dispose;
+
+    public DialogRequestType Type { get; set; }
+    public string Title { get; set; }
+    public string Message { get; set; }
+    public string Value { get; set; }
+    public string PositiveButton { get; set; }
+    public string NegativeButton { get; set; }
+    [Inject] public IBlazorDialogService DialogService { get; set; }
+    public ICommand PositiveCommand { get; set; }
+    public ICommand NegativeCommand { get; set; }
+    public SimpleDialogRequest Request { get; set; }
+
+    public Dialogs( )
+    { 
+        PositiveCommand = ReactiveCommand.Create(PositiveClicked);
+        NegativeCommand = ReactiveCommand.Create(NegativeClicked);
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        if (_dispose != null) _dispose.Dispose();
+        _dispose = DialogService.OnDialogRequest.Subscribe(OnModalRequested);
+    }
+
+    private async Task NegativeClicked()
+    {
+        switch (Type)
+        {
+            case DialogRequestType.Alert:
+                Request.SetResult();
+                break;
+            case DialogRequestType.Confirm:
+                Request.SetResult(false);
+                break;
+            case DialogRequestType.Prompt:
+                Request.SetResult(string.Empty);
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+        await _modal.Hide();
+    }
+
+    private async Task PositiveClicked()
+    {
+        switch (Type)
+        {
+            case DialogRequestType.Alert:
+                Request.SetResult();
+                break;
+            case DialogRequestType.Confirm:
+                Request.SetResult(true);
+                break;
+            case DialogRequestType.Prompt:
+                Request.SetResult(Value);
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+        await _modal.Hide();
+    }
+
+    private async void OnModalRequested(SimpleDialogRequest request)
+    { 
+         Title = request.Title;
+
+
+        Type = request.Type;
+        Message = request.Message;
+        PositiveButton = request.PositiveButton;
+        NegativeButton = request.NegativeButton;
+        Request = request;
+        await _modal.Show();
+    }
+
+
+    public void Dispose()
+    {
+        _dispose.Dispose();
+    }
+
+    public void CancelDialog()
+    {   Request.Cancel();
+ 
+    }
+        private Task OnModalClosing(ModalClosingEventArgs e)
+        {
+            if (e.CloseReason != CloseReason.UserClosing)
+            {
+                CancelDialog();
+            }
+            return Task.CompletedTask;
+        }
+
+}

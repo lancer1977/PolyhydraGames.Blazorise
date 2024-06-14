@@ -134,7 +134,7 @@ public abstract class PolyComponentBase<T> : ComponentBase, IViewFor<T>, INotify
                 Debug.WriteLine( "StateChanged" );
                 await InvokeAsync( StateHasChanged );
             } )
-        .Subscribe()
+            .Subscribe()
             .DisposeWith( CompositeDisposable );
     }
 
