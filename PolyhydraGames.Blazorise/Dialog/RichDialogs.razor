@@ -1,6 +1,7 @@
 ﻿@using System.Windows.Input  
 @using ReactiveUI
 @using System
+@using System.Reactive.Linq
 
 @implements IDisposable; 
 <Modal @ref="_modal" Closing="OnModalClosing">
@@ -47,7 +48,7 @@
     public ICommand SelectionCommand { get; set; }
     public DialogRequest Request { get; set; }
 
-    public Dialogs( )
+    public RichDialogs( )
     {
         PositiveCommand = ReactiveCommand.Create(PositiveClicked);
         NegativeCommand = ReactiveCommand.Create(NegativeClicked);
@@ -58,7 +59,7 @@
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync(); 
-        _dispose = _dialogService.OnDialogRequest.Subscribe(OnModalRequested);
+        _dispose = _dialogService.OnDialogRequest.Select(OnModalRequested).Subscribe();
     }
 
     private async Task NegativeClicked()
@@ -122,7 +123,7 @@
         await _modal.Hide();
     }
 
-    private async void OnModalRequested(DialogRequest request)
+    private async Task OnModalRequested(DialogRequest request)
     {
         _waitingForUserSelection = true;
         Title = request.Title;

@@ -1,4 +1,5 @@
-﻿@using System.Windows.Input
+﻿@using System.Reactive.Linq
+@using System.Windows.Input
 @using PolyhydraGames.BlazorComponents.Dialog
 @using ReactiveUI
 @implements IDisposable; 
@@ -35,7 +36,7 @@
     public ICommand NegativeCommand { get; set; }
     public SimpleDialogRequest Request { get; set; }
 
-    public Dialogs( )
+    public SimpleDialogs( )
     { 
         PositiveCommand = ReactiveCommand.Create(PositiveClicked);
         NegativeCommand = ReactiveCommand.Create(NegativeClicked);
@@ -43,9 +44,8 @@
 
     protected override async Task OnInitializedAsync()
     {
-        await base.OnInitializedAsync();
-        if (_dispose != null) _dispose.Dispose();
-        _dispose = DialogService.OnDialogRequest.Subscribe(OnModalRequested);
+        await base.OnInitializedAsync(); 
+        _dispose = DialogService.OnDialogRequest.Select(OnModalRequested).Subscribe();
     }
 
     private async Task NegativeClicked()
@@ -86,7 +86,7 @@
         await _modal.Hide();
     }
 
-    private async void OnModalRequested(SimpleDialogRequest request)
+    private async Task OnModalRequested(SimpleDialogRequest request)
     { 
          Title = request.Title;
 
