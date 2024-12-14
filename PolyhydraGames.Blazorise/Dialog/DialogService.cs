@@ -8,21 +8,17 @@ namespace PolyhydraGames.BlazorComponents.Dialog;
 
 public class DialogService : IObservableDialogService, IDialogService
 {
+    private readonly ILogger<DialogService>? _logger;
     public IObservable<DialogRequest> OnDialogRequest { get; }
     private Subject<DialogRequest> DialogResultRequest { get; } = new();
     public DialogService( ILogger<DialogService>? logger = null )
     {
+        _logger = logger;
         OnDialogRequest = DialogResultRequest.AsObservable();
-        if ( logger == null )
-        {
-            return;
-        }
 
-        logger.LogInformation( "DialogService Created" );
-        OnDialogRequest.Subscribe( x =>
-        {
-            logger.LogInformation( x.Message );
-        }
+        logger?.LogInformation( "DialogService Created" );
+
+        OnDialogRequest.Do( x => { logger?.LogInformation( "Dialog Request:" + x.Message ); }
         );
     }
 
@@ -30,16 +26,22 @@ public class DialogService : IObservableDialogService, IDialogService
 
     public async Task NotificationAsync( string message, string title = "", string button = "OK" )
     {
-        var request = new DialogRequest()
+        try
         {
-            Message = message,
-            Title = title,
-            PositiveButton = "OK",
-            Type = DialogRequestType.Alert
-
-        };
-        DialogResultRequest.OnNext( request );
-        await request.AsTask.Task;
+            var request = new DialogRequest()
+            {
+                Message = message,
+                Title = title,
+                PositiveButton = "OK",
+                Type = DialogRequestType.Alert
+            };
+            DialogResultRequest.OnNext( request );
+            await request.AsTask.Task;
+        }
+        catch ( Exception ex )
+        {
+            _logger?.LogCritical(ex, "NotificationAsync failed!" );
+        }
         //await _helper.Alert(title + ": " + message);
     }
 

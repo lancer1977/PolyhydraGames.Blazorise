@@ -13,13 +13,13 @@
         <ModalBody>
             @if (Type == DialogRequestType.Selection)
             {  <ListGroup Flush> 
-                        @foreach (var item in Items)
-                        {
-                            <ListGroupItem  @onclick="()=>SelectionCommand.Execute(item)">
-                                @item.ToString() 
-                            </ListGroupItem>
-                        } 
-                    </ListGroup> 
+                    @foreach (var item in Items)
+                    {
+                        <ListGroupItem  @onclick="()=>SelectionCommand.Execute(item)">
+                            @item.ToString() 
+                        </ListGroupItem>
+                    } 
+                </ListGroup> 
             }
             else
             {
@@ -52,14 +52,17 @@
     {
         PositiveCommand = ReactiveCommand.Create(PositiveClicked);
         NegativeCommand = ReactiveCommand.Create(NegativeClicked);
-        SelectionCommand = ReactiveCommand.Create<object>(x=>ObjectSelected(x)); 
+        SelectionCommand = ReactiveCommand.Create<object>(x=>ObjectSelected(x));
+
 
     }
 
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync(); 
-        _dispose = _dialogService.OnDialogRequest.Select(OnModalRequested).Subscribe();
+        _dispose = _dialogService.OnDialogRequest.Subscribe(OnModalRequested);
+
+      //  _modal.Show();
     }
 
     private async Task NegativeClicked()
@@ -123,7 +126,7 @@
         await _modal.Hide();
     }
 
-    private async Task OnModalRequested(DialogRequest request)
+    private void OnModalRequested(DialogRequest request)
     {
         _waitingForUserSelection = true;
         Title = request.Title;
@@ -134,13 +137,13 @@
         Items = request.Items;
         Request = request;
 
-        await _modal.Show();
+        _modal.Show(); 
     }
 
 
     public void Dispose()
     {
-        _dispose.Dispose();
+       // _dispose.Dispose();
     }
 
     public void CancelDialog()
