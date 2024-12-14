@@ -6,11 +6,7 @@ using PolyhydraGames.Core.Interfaces;
 
 namespace PolyhydraGames.BlazorComponents.Dialog;
 
-public interface IObservableDialogService : IDialogService
-{
-    public IObservable<DialogRequest> OnDialogRequest { get; }
-}
-public class DialogService : IObservableDialogService
+public class DialogService : IObservableDialogService, IDialogService
 {
     public IObservable<DialogRequest> OnDialogRequest { get; }
     private Subject<DialogRequest> DialogResultRequest { get; } = new();
