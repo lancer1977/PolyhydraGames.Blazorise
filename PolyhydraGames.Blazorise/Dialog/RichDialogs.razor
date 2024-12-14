@@ -1,36 +1,38 @@
-﻿@using System.Windows.Input  
+﻿@using System.Windows.Input
 @using ReactiveUI
 @using System
 @using System.Reactive.Linq
 
-@implements IDisposable; 
+@implements IDisposable
+<Button @onclick="ShowTest">TEST!</Button>
 <Modal @ref="_modal" Closing="OnModalClosing">
     <ModalContent Centered>
         <ModalHeader>
-            <ModalTitle>@Title</ModalTitle> 
+            <ModalTitle>@Title</ModalTitle>
             <CloseButton onclicked="@CancelDialog" />
         </ModalHeader>
         <ModalBody>
             @if (Type == DialogRequestType.Selection)
-            {  <ListGroup Flush> 
+            {
+                <ListGroup Flush>
                     @foreach (var item in Items)
                     {
-                        <ListGroupItem  @onclick="()=>SelectionCommand.Execute(item)">
-                            @item.ToString() 
+                        <ListGroupItem @onclick="()=>SelectionCommand.Execute(item)">
+                            @item.ToString()
                         </ListGroupItem>
-                    } 
-                </ListGroup> 
+                    }
+                </ListGroup>
             }
             else
             {
                 <Text>@Message</Text>
-                <TextEdit Visibility="@(Type == DialogRequestType.Prompt ? Visibility.Visible : Visibility.Invisible)" @bind-Text="@Value"></TextEdit> 
+                <TextEdit Visibility="@(Type == DialogRequestType.Prompt ? Visibility.Visible : Visibility.Invisible)" @bind-Text="@Value"></TextEdit>
                 <Button Command="PositiveCommand">@PositiveButton</Button>
-                <Button Command="NegativeCommand">@NegativeButton</Button> 
-            } 
-        </ModalBody> 
-    </ModalContent >
-</Modal> 
+                <Button Command="NegativeCommand">@NegativeButton</Button>
+            }
+        </ModalBody>
+    </ModalContent>
+</Modal>
 @code {
     private bool _waitingForUserSelection;
     public Modal _modal;
@@ -38,7 +40,7 @@
     public DialogRequestType Type { get; set; }
     public string Title { get; set; }
     public string Message { get; set; }
-    public string Value { get; set; } 
+    public string Value { get; set; }
     public string PositiveButton { get; set; }
     public string NegativeButton { get; set; }
     public List<object> Items { get; set; }
@@ -48,21 +50,21 @@
     public ICommand SelectionCommand { get; set; }
     public DialogRequest Request { get; set; }
 
-    public RichDialogs( )
+    public RichDialogs()
     {
         PositiveCommand = ReactiveCommand.Create(PositiveClicked);
         NegativeCommand = ReactiveCommand.Create(NegativeClicked);
-        SelectionCommand = ReactiveCommand.Create<object>(x=>ObjectSelected(x));
+        SelectionCommand = ReactiveCommand.Create<object>(x => ObjectSelected(x));
 
 
     }
 
     protected override async Task OnInitializedAsync()
     {
-        await base.OnInitializedAsync(); 
-        _dispose = _dialogService.OnDialogRequest.Subscribe(OnModalRequested);
+        await base.OnInitializedAsync();
+        _dispose = _dialogService.OnDialogRequest.Select(OnModalRequested).Subscribe();
 
-      //  _modal.Show();
+        //  _modal.Show();
     }
 
     private async Task NegativeClicked()
@@ -79,7 +81,7 @@
                 Request.SetResult(string.Empty);
                 break;
             case DialogRequestType.PromptInt:
-                Request.SetResult(null);
+                Request.SetResult(0,true);
                 break;
             case DialogRequestType.Selection:
                 Request.SetSelection(string.Empty);
@@ -90,10 +92,10 @@
         await DismissModalOnSuccess();
     }
 
-    private async Task ObjectSelected(object item)
+    private Task ObjectSelected(object item)
     {
         Request.SetSelection(item);
-        await DismissModalOnSuccess();
+        return DismissModalOnSuccess();
     }
     private async Task PositiveClicked()
     {
@@ -120,13 +122,24 @@
         await DismissModalOnSuccess();
     }
 
-    private async Task DismissModalOnSuccess()
+    private Task DismissModalOnSuccess()
     {
         _waitingForUserSelection = false;
-        await _modal.Hide();
+        return _modal.Hide();
     }
 
-    private void OnModalRequested(DialogRequest request)
+    public void ShowTest()
+    {
+        OnModalRequested(new DialogRequest()
+            {
+                Title = "Test",
+                Message = "Test!!!!",
+                Type = DialogRequestType.Alert
+
+            });
+    }
+
+    private Task OnModalRequested(DialogRequest request)
     {
         _waitingForUserSelection = true;
         Title = request.Title;
@@ -137,17 +150,18 @@
         Items = request.Items;
         Request = request;
 
-        _modal.Show(); 
+        return _modal.Show();
     }
 
 
     public void Dispose()
     {
-       // _dispose.Dispose();
+        _dispose.Dispose();
     }
 
     public void CancelDialog()
-    {   Request.Cancel();
+    {
+        Request.Cancel();
         _waitingForUserSelection = false;
     }
 

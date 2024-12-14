@@ -63,18 +63,18 @@ public class DialogRequest
 
     public void SetResult( bool value )
     {
-        AsBool?.SetResult( new DialogResult<bool>( value ) );
+        AsBool.SetResult( new DialogResult<bool>( value ) );
     }
 
     public void SetResult( int value,bool cancelled = false)
     {
         if ( cancelled )
         {
-            AsInt.SetResult( new DialogResult<int>( 0 ) );
+            AsInt.SetResult( new DialogResult<int>( value ) );
         }
         else
         {
-            AsInt.SetResult( new DialogResult<int>( 0 ) );
+            AsInt.SetResult( new DialogResult<int>( value ) );
         }
      
     }
