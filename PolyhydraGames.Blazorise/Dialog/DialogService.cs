@@ -1,25 +1,33 @@
 ﻿using System.Diagnostics;
 using System.Reactive.Linq;
 using System.Reactive.Subjects;
+using Microsoft.Extensions.Logging;
 using PolyhydraGames.Core.Interfaces;
 
 namespace PolyhydraGames.BlazorComponents.Dialog;
 
-public class DialogService : IDialogService
+public interface IObservableDialogService : IDialogService
 {
     public IObservable<DialogRequest> OnDialogRequest { get; }
-    public Subject<DialogRequest> DialogResultRequest { get; } = new Subject<DialogRequest>();
-    public DialogService()
+}
+public class DialogService : IObservableDialogService
+{
+    public IObservable<DialogRequest> OnDialogRequest { get; }
+    private Subject<DialogRequest> DialogResultRequest { get; } = new();
+    public DialogService( ILogger<DialogService>? logger = null )
     {
         OnDialogRequest = DialogResultRequest.AsObservable();
-#if DEBUG
+        if ( logger == null )
+        {
+            return;
+        }
 
+        logger.LogInformation( "DialogService Created" );
         OnDialogRequest.Subscribe( x =>
         {
-            Debug.WriteLine( x.Message );
-        } );
-        
-#endif
+            logger.LogInformation( x.Message );
+        }
+        );
     }
 
 
@@ -104,7 +112,7 @@ public class DialogService : IDialogService
         {
             Items = items.Cast<object>().ToList(),
             //Message = message,
-            Title = title, 
+            Title = title,
             Type = DialogRequestType.Selection
 
         };
@@ -112,7 +120,7 @@ public class DialogService : IDialogService
         var result = await request.AsSelection.Task;
         var resultOfT = new DialogResult<T>
         {
-            Result = (T) result.Result,
+            Result = (T)result.Result,
             Ok = result.Ok
         };
 

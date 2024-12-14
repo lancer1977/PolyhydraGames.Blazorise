@@ -41,7 +41,7 @@
     public string PositiveButton { get; set; }
     public string NegativeButton { get; set; }
     public List<object> Items { get; set; }
-    [Inject] private IDialogService _dialogService { get; set; }
+    [Inject] private IObservableDialogService _dialogService { get; set; }
     public ICommand PositiveCommand { get; set; }
     public ICommand NegativeCommand { get; set; }
     public ICommand SelectionCommand { get; set; }
@@ -57,10 +57,8 @@
 
     protected override async Task OnInitializedAsync()
     {
-        await base.OnInitializedAsync();
-        if (_dispose != null) _dispose.Dispose();
-        var service = _dialogService as DialogService;
-        _dispose = service.OnDialogRequest.Subscribe(OnModalRequested);
+        await base.OnInitializedAsync(); 
+        _dispose = _dialogService.OnDialogRequest.Subscribe(OnModalRequested);
     }
 
     private async Task NegativeClicked()
@@ -148,6 +146,7 @@
     {   Request.Cancel();
         _waitingForUserSelection = false;
     }
+
     private Task OnModalClosing(ModalClosingEventArgs e)
     {
         if (_waitingForUserSelection)
