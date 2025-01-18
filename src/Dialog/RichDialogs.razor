@@ -62,9 +62,7 @@
     protected override async Task OnInitializedAsync()
     {
         await base.OnInitializedAsync();
-        _dispose = _dialogService.OnDialogRequest.Select(OnModalRequested).Subscribe();
-
-        //  _modal.Show();
+        _dispose = _dialogService.OnDialogRequest.Select(OnModalRequested).Subscribe(); 
     }
 
     private async Task NegativeClicked()
@@ -125,6 +123,7 @@
     private Task DismissModalOnSuccess()
     {
         _waitingForUserSelection = false;
+        Value = string.Empty;
         return _modal.Hide();
     }
 
