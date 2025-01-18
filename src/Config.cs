@@ -18,7 +18,7 @@ namespace PolyhydraGames.BlazorComponents
         /// <returns></returns>
         public static IServiceCollection AddBlazorComponents( this IServiceCollection serviceCollection )
         {
-            serviceCollection.AddSingleton<IDialogService, DialogService>();
+            serviceCollection.AddSingleton<IDialogService, ObservableDialogService>();
             return serviceCollection;
         }
     }
