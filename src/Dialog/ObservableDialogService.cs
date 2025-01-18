@@ -53,7 +53,7 @@ public class ObservableDialogService : IObservableDialogService, IDialogService
             Title = title,
             PositiveButton = "Ok",
             NegativeButton = "Cancel",
-            Type = DialogRequestType.Confirm
+            Type = DialogRequestType.PromptInt
 
         };
         DialogResultRequest.OnNext( request );
@@ -67,7 +67,7 @@ public class ObservableDialogService : IObservableDialogService, IDialogService
             Title = title,
             PositiveButton = "Ok",
             NegativeButton = "Cancel",
-            Type = DialogRequestType.Confirm
+            Type = DialogRequestType.PromptInt
 
         };
         DialogResultRequest.OnNext( request );
@@ -97,7 +97,7 @@ public class ObservableDialogService : IObservableDialogService, IDialogService
             Title = title,
             PositiveButton = labelOk,
             NegativeButton = labelCancel,
-            Type = DialogRequestType.Confirm
+            Type = DialogRequestType.Prompt
 
         };
         DialogResultRequest.OnNext( request );
