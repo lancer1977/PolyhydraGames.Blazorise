@@ -6,17 +6,17 @@ using PolyhydraGames.Core.Interfaces;
 
 namespace PolyhydraGames.BlazorComponents.Dialog;
 
-public class DialogService : IObservableDialogService, IDialogService
+public class ObservableDialogService : IObservableDialogService, IDialogService
 {
-    private readonly ILogger<DialogService>? _logger;
+    private readonly ILogger<ObservableDialogService>? _logger;
     public IObservable<DialogRequest> OnDialogRequest { get; }
     private Subject<DialogRequest> DialogResultRequest { get; } = new();
-    public DialogService( ILogger<DialogService>? logger = null )
+    public ObservableDialogService( ILogger<ObservableDialogService>? logger = null )
     {
         _logger = logger;
         OnDialogRequest = DialogResultRequest.AsObservable();
 
-        logger?.LogInformation( "DialogService Created" );
+        logger?.LogInformation( "ObservableDialogService Created" );
 
         OnDialogRequest.Do( x => { logger?.LogInformation( "Dialog Request:" + x.Message ); }
         );

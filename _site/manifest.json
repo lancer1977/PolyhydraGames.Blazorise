@@ -1,0 +1,403 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/code/core.blazorise",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PolyhydraGames.BlazorComponents.Components.PolyComponentBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PolyhydraGames.BlazorComponents.Components.PolyComponentBase-1.html",
+          "hash": "JEShLxJZRXWNgOvNfDLUVHnMaSijpQ4eGZe+ahI4BK0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PolyhydraGames.BlazorComponents.Components.PolyComponentInjectableBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PolyhydraGames.BlazorComponents.Components.PolyComponentInjectableBase-1.html",
+          "hash": "NxMnFtjggoutwwPMesi+L7D3zwNz85JeGAVtekELJ5k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PolyhydraGames.BlazorComponents.Components.PolyComponentParamBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PolyhydraGames.BlazorComponents.Components.PolyComponentParamBase-1.html",
+          "hash": "oinnCw1nflmS6bWsxLvfan7Wgz/tuummqw4X9K1cYk8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PolyhydraGames.BlazorComponents.Components.PolyDisposableBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PolyhydraGames.BlazorComponents.Components.PolyDisposableBase.html",
+          "hash": "SN3J2dPBPvEo2401yYTSO6GwdpCMWeSSfsyMKfTPjLA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PolyhydraGames.BlazorComponents.Components.QueryPolyComponentBase-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PolyhydraGames.BlazorComponents.Components.QueryPolyComponentBase-1.html",
+          "hash": "ArFH7y8dqacFQK8Wf920GFuCWGcf+aChx/J7T8aDDas="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PolyhydraGames.BlazorComponents.Components.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PolyhydraGames.BlazorComponents.Components.html",
+          "hash": "B/KsFVQir66JPVEK+7uo5we32XiQgrCbNOWAf0/urZU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PolyhydraGames.BlazorComponents.Config.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PolyhydraGames.BlazorComponents.Config.html",
+          "hash": "8nvXQsFZ1+QfsWy8WcxlgiQz2yU8szYBzZzMboude7o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PolyhydraGames.BlazorComponents.CurrentPage.CurrentPageService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PolyhydraGames.BlazorComponents.CurrentPage.CurrentPageService.html",
+          "hash": "3Y8AkcqrxBWuNoXO8ewNrN/GaU0CzlYUMrEF0JGNM6s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PolyhydraGames.BlazorComponents.CurrentPage.ICurrentPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PolyhydraGames.BlazorComponents.CurrentPage.ICurrentPage.html",
+          "hash": "GCRAm9yeaAZEncL0ne5LM6Gar8jPpCbWEd3tewt87zw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PolyhydraGames.BlazorComponents.CurrentPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PolyhydraGames.BlazorComponents.CurrentPage.html",
+          "hash": "Rib7L3sUtPgaABh8ziNBemx3/e11R9XaMhdYqC997uk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PolyhydraGames.BlazorComponents.Dialog.DialogRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PolyhydraGames.BlazorComponents.Dialog.DialogRequest.html",
+          "hash": "wpXQziXWoLIEINYofNLV22vdqUNtBraZ8x8ACK7lsRM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PolyhydraGames.BlazorComponents.Dialog.DialogRequestType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PolyhydraGames.BlazorComponents.Dialog.DialogRequestType.html",
+          "hash": "+3PvIoDABwIXV4/fJMhvtWqOsW78uVn9jRx3qGlDR18="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PolyhydraGames.BlazorComponents.Dialog.DialogResult-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PolyhydraGames.BlazorComponents.Dialog.DialogResult-1.html",
+          "hash": "vI4IDVhldfrKCrownuzYgCBi1MQ1MPrGX2nHVM7kkZU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PolyhydraGames.BlazorComponents.Dialog.IObservableDialogService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PolyhydraGames.BlazorComponents.Dialog.IObservableDialogService.html",
+          "hash": "ll4Mgqyfojw/jC5Fy9w9QC8dVGrEJhSyeWzaye5BXqc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.html",
+          "hash": "HPTYEROsy5irmmuErZRWDgoi84LX/b3vZ6ZRCGzbmR0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PolyhydraGames.BlazorComponents.Dialog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PolyhydraGames.BlazorComponents.Dialog.html",
+          "hash": "a0YzjFepXOTOE6FXE7UCERNvOrIUnOriKN/EGaiUOBY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PolyhydraGames.BlazorComponents.QueryStrings.QueryStringParameterAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PolyhydraGames.BlazorComponents.QueryStrings.QueryStringParameterAttribute.html",
+          "hash": "FYlCVrJQV18ysrg2DQqcbTf3tblBj8CdK8BNwL0rFw0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PolyhydraGames.BlazorComponents.QueryStrings.QueryStringParameterExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PolyhydraGames.BlazorComponents.QueryStrings.QueryStringParameterExtensions.html",
+          "hash": "vaBIqktu/n8yI8vDV6GxYtcv4Ay83fRSfR9FNU7/Ln4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PolyhydraGames.BlazorComponents.QueryStrings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PolyhydraGames.BlazorComponents.QueryStrings.html",
+          "hash": "PZ7haSA/keDmVp9KTWE/O6/pkG41UeSMfLaFHjmGo2o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PolyhydraGames.BlazorComponents.ReactiveExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PolyhydraGames.BlazorComponents.ReactiveExtensions.html",
+          "hash": "q/AJSJwkMbns/nHKbFYm4jtcwRBdzvlgu9RtDvbNf2A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PolyhydraGames.BlazorComponents.ViewModels.ComponentViewModelBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PolyhydraGames.BlazorComponents.ViewModels.ComponentViewModelBase.html",
+          "hash": "HAMXe1I+Thcd12nXcn6UtRpKDw9KU1yNIuNSkOrxiK4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PolyhydraGames.BlazorComponents.ViewModels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PolyhydraGames.BlazorComponents.ViewModels.html",
+          "hash": "ePXh/lamOpEpyMvd54uHqAW3+iHi2kFsN6vlLGAywLc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PolyhydraGames.BlazorComponents.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PolyhydraGames.BlazorComponents.html",
+          "hash": "4z2kfNQUIotAzXqnxKk6ndWoaUc0fRuO/oSocS7AMOM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "MhWhfc5tnvVAz+efIvnfLTAihA9j9Ic0ge1+cveMkE8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "oWXVeJrVvwCHB/G0057JYUW8CFQCSyA6Q/6bzs5jXDQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "wytdRB/m3G+6kXUtlmzxIO6lnvb9yCASrZY/ugdqx/w="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "oF42RMYbPP7eGMDMzL1h43BdOCoPHzg0TK5e+djTmYc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "WSuRrYiGwKKMbtdG9z8W9fXmLoCyTnGg9AxbPKLXm2Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ManagedReferenceDocumentProcessor disable incremental build because last build doesn't contain version .",
+          "incrementalPhase": "build",
+          "total_file_count": 23,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
