@@ -1,18 +1,19 @@
-﻿@if (Items != null)
-{      <Column>
-            <p> @Title</p>
+﻿@typeparam T where T : class
+@if (Items != null)
+{
+    <Column>
+        <p> @Title</p>
 
-            <Select @onchange="OnSelected" @bind-SelectedValue="@SelectedValue" >
-                @if (ShowNull)
-                {
-                    <SelectItem TValue="object" Value="@null">@GetTitle(null)</SelectItem>
-                }
-                @foreach (var item in Items)
-                {
-                    <SelectItem   Value="@item" >@GetTitle(item)</SelectItem>
-                }
-            </Select> 
-       </Column>
+        <Select @bind-SelectedValue="@Value">
+            <SelectItem TValue="object" Value="@null">
+                @GetTitle(null)
+            </SelectItem>
+            @foreach (var item in Items)
+            {
+                <SelectItem Value="@item">@GetTitle(item)</SelectItem>
+            }
+        </Select>
+    </Column>
 }
 else
 {
@@ -20,25 +21,27 @@ else
 }
 
 @code {
-    [Parameter]
-    public string? Title { get; set; }
-    [Parameter]
-    public IEnumerable<object>? Items { get; set; }
-    [Parameter]
-    public Func<object?, string?> GetTitle { get; set; } = x => x.ToString();
-    [Parameter]
-    public Func<ChangeEventArgs, Task>? OnSelected { get; set; }
-    [Parameter] public bool ShowNull { get; set; }
-    [Parameter] public RenderFragment? ChildContent { get; set; }
 
-    [Parameter]
-    public object? SelectedValue
+    public Picker()
     {
-        get { return default; } 
+        GetTitle = x => x?.ToString() ?? PlaceHolder;
+    }
+    [Parameter] public string? Title { get; set; }
+    [Parameter] public string PlaceHolder { get; set; } = "Select an item...";
+    [Parameter] public IEnumerable<T>? Items { get; set; }
+    [Parameter] public Func<T?, string> GetTitle { get; set; }
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public EventCallback<T> ValueChanged { get; set; }
+    private T _value;
+    [Parameter]
+    public T Value
+    {
+        get => _value;
         set
         {
+            if (_value == value) return;
+            _value = value;
+            ValueChanged.InvokeAsync(value);
         }
     }
-
-
 }
