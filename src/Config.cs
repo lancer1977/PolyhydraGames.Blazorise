@@ -3,23 +3,22 @@ using PolyhydraGames.BlazorComponents.Dialog;
 using PolyhydraGames.Core.Interfaces;
 
 
-namespace PolyhydraGames.BlazorComponents
+namespace PolyhydraGames.BlazorComponents;
+
+/// <summary>
+/// Extension methods for building the blazorise options.
+/// </summary>
+public static class Config
 {
     /// <summary>
-    /// Extension methods for building the blazorise options.
+    /// Register blazorise and configures the default behaviour.
     /// </summary>
-    public static class Config
+    /// <param name="serviceCollection"></param>
+    /// <param name="configureOptions"></param>
+    /// <returns></returns>
+    public static IServiceCollection AddPolyDialogs( this IServiceCollection serviceCollection )
     {
-        /// <summary>
-        /// Register blazorise and configures the default behaviour.
-        /// </summary>
-        /// <param name="serviceCollection"></param>
-        /// <param name="configureOptions"></param>
-        /// <returns></returns>
-        public static IServiceCollection AddBlazorComponents( this IServiceCollection serviceCollection )
-        {
-            serviceCollection.AddSingleton<IDialogService, ObservableDialogService>();
-            return serviceCollection;
-        }
+        serviceCollection.AddSingleton<IDialogService, ObservableDialogService>();
+        return serviceCollection;
     }
 }
