@@ -4,7 +4,6 @@
 @using System.Reactive.Linq
 
 @implements IDisposable
-<Button @onclick="ShowTest">TEST!</Button>
 <Modal @ref="_modal" Closing="OnModalClosing">
     <ModalContent Centered>
         <ModalHeader>
@@ -55,8 +54,6 @@
         PositiveCommand = ReactiveCommand.Create(PositiveClicked);
         NegativeCommand = ReactiveCommand.Create(NegativeClicked);
         SelectionCommand = ReactiveCommand.Create<object>(x => ObjectSelected(x));
-
-
     }
 
     protected override async Task OnInitializedAsync()
