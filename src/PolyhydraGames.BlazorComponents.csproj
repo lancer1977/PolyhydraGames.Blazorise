@@ -20,10 +20,10 @@
 
   <ItemGroup>
     <PackageReference Include="Blazorise" Version="1.7.4" />
-    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="9.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="9.0.2" />
     <PackageReference Include="PolyhydraGames.Core.Interfaces" Version="2.0.0.41" />
     <PackageReference Include="PolyhydraGames.Core.ReactiveUI" Version="1.0.0.49" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.2" />
     <PackageReference Include="ReactiveUI.Blazor" Version="20.1.63" />
 
   </ItemGroup>
