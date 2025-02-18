@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using System.Reactive.Linq;
+﻿using System.Reactive.Linq;
 using System.Reactive.Subjects;
 using Microsoft.Extensions.Logging;
 using PolyhydraGames.Core.Interfaces;
