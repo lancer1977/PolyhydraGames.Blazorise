@@ -18,7 +18,9 @@ public static class Config
     /// <returns></returns>
     public static IServiceCollection AddPolyDialogs( this IServiceCollection serviceCollection )
     {
-        serviceCollection.AddSingleton<IDialogService, ObservableDialogService>();
+        serviceCollection.AddSingleton<ObservableDialogService>();
+        serviceCollection.AddSingleton<IDialogService>(x=>x.GetRequiredService<ObservableDialogService>());
+        serviceCollection.AddSingleton<IObservableDialogService>( x => x.GetRequiredService<ObservableDialogService>() ); 
         return serviceCollection;
     }
 }
