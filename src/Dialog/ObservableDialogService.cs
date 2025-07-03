@@ -7,12 +7,12 @@ namespace PolyhydraGames.BlazorComponents.Dialog;
 
 public class ObservableDialogService : IObservableDialogService, IDialogService
 {
-    private readonly ILogger<ObservableDialogService>? _logger;
+    private readonly ILogger<ObservableDialogService>? Logger;
     public IObservable<DialogRequest> OnDialogRequest { get; }
     private Subject<DialogRequest> DialogResultRequest { get; } = new();
     public ObservableDialogService( ILogger<ObservableDialogService>? logger = null )
     {
-        _logger = logger;
+        Logger = logger;
         OnDialogRequest = DialogResultRequest.AsObservable();
 
         logger?.LogInformation( "ObservableDialogService Created" );
@@ -39,7 +39,7 @@ public class ObservableDialogService : IObservableDialogService, IDialogService
         }
         catch ( Exception ex )
         {
-            _logger?.LogCritical(ex, "NotificationAsync failed!" );
+            Logger?.LogCritical(ex, "NotificationAsync failed!" );
         }
         //await _helper.Alert(title + ": " + message);
     }
