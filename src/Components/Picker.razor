@@ -9,8 +9,8 @@
 
         <Select id="@_selectId"
                 TValue="T"
-                SelectedValue="@Value"
-                SelectedValueChanged="@OnValueChanged">
+                SelectedValue="_value"
+                SelectedValueChanged="OnValueChanged">
             <SelectItem TValue="T" Value="@null">
                 @GetTitle(null)
             </SelectItem>
@@ -30,7 +30,7 @@ else
 
 @code {
     private T? _value;
-    private string _selectId = $"select_{Guid.NewGuid()}";
+    private readonly string _selectId = $"select_{Guid.NewGuid()}";
 
     public Picker()
     {
@@ -42,44 +42,35 @@ else
     [Parameter] public string PlaceHolder { get; set; } = "Select an item...";
     [Parameter] public IEnumerable<T>? Items { get; set; }
 
-    /// <summary>
-    /// Provides a function to extract the label for each item.
-    /// </summary>
+    /// <summary>Function to extract the label for each item.</summary>
     [Parameter] public Func<T?, string> GetTitle { get; set; }
 
-    /// <summary>
-    /// Allows rendering custom content when Items is null.
-    /// </summary>
+    /// <summary>Optional content shown when Items is null.</summary>
     [Parameter] public RenderFragment? ChildContent { get; set; }
 
-    [Parameter] public EventCallback<T> ValueChanged { get; set; }
+    /// <summary>Two-way bound selected value.</summary>
+    [Parameter] public T? Value { get; set; }
 
-    [Parameter]
-    public T Value
+    [Parameter] public EventCallback<T?> ValueChanged { get; set; }
+
+    protected override void OnParametersSet()
     {
-        get => _value!;
-        set
-        {
-            if (!EqualityComparer<T>.Default.Equals(_value, value))
-            {
-                _value = value;
-                _ = ValueChanged.InvokeAsync(value);
-            }
-        }
+        _value = Value;
     }
 
-    private async Task OnValueChanged(T newValue)
+    private async Task OnValueChanged(T? newValue)
     {
-        if (!EqualityComparer<T>.Default.Equals(_value, newValue))
+        if (!EqualityComparer<T?>.Default.Equals(_value, newValue))
         {
             _value = newValue;
+            Value = newValue;
             await ValueChanged.InvokeAsync(newValue);
         }
     }
 
     protected override void OnInitialized()
     {
-        // Ensure GetTitle is not overwritten if already set via [Parameter]
+        // Ensure GetTitle is not overwritten if set by consumer
         GetTitle ??= x => x?.ToString() ?? PlaceHolder;
     }
 }
