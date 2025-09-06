@@ -24,7 +24,7 @@
     <PackageReference Include="PolyhydraGames.Core.Interfaces" Version="2.0.0.43" />
     <PackageReference Include="PolyhydraGames.Core.ReactiveUI" Version="1.0.0.50" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.8" />
-    <PackageReference Include="ReactiveUI.Blazor" Version="20.4.1" />
+    <PackageReference Include="ReactiveUI.Blazor" Version="21.0.1" />
 
   </ItemGroup>
 
