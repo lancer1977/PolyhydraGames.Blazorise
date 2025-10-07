@@ -21,8 +21,8 @@
   <ItemGroup>
     <PackageReference Include="Blazorise" Version="[1.7.7]" />
     <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="9.0.9" />
-    <PackageReference Include="PolyhydraGames.Core.Interfaces" Version="2.0.0.43" />
-    <PackageReference Include="PolyhydraGames.Core.ReactiveUI" Version="1.0.0.51" />
+    <PackageReference Include="PolyhydraGames.Core.Interfaces" Version="2.0.0.44" />
+    <PackageReference Include="PolyhydraGames.Core.ReactiveUI" Version="1.0.0.52" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.9" />
     <PackageReference Include="ReactiveUI.Blazor" Version="22.0.1" />
 
