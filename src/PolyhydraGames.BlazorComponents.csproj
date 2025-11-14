@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
@@ -20,10 +20,10 @@
 
   <ItemGroup>
     <PackageReference Include="Blazorise" Version="[1.7.7]" />
-    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="9.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="10.0.0" />
     <PackageReference Include="PolyhydraGames.Core.Interfaces" Version="2.0.0.44" />
     <PackageReference Include="PolyhydraGames.Core.ReactiveUI" Version="1.0.0.52" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="9.0.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="10.0.0" />
     <PackageReference Include="ReactiveUI.Blazor" Version="22.2.1" />
 
   </ItemGroup>
