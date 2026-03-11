@@ -74,22 +74,63 @@ public static class QueryStringParameterExtensions
         navigationManager.NavigateTo( newUri );
     }
 
-    private static object ConvertValue( StringValues value, Type type )
+    private static object? ConvertValue( StringValues value, Type type )
     {
-        if ( type == typeof( Guid ) )
+        // Handle empty or null values
+        if (StringValues.IsNullOrEmpty(value))
         {
-            return Guid.Parse( value[0] );
-        }
-        else
-        {
-            return Convert.ChangeType( value[0], type, CultureInfo.InvariantCulture );
+            // If the type is nullable, return null; otherwise return default
+            return type.IsNullableType() ? null : GetDefaultValue(type);
         }
 
+        var stringValue = value[0]!;
+
+        // Handle nullable types - extract the underlying type
+        var underlyingType = type.IsNullableType() ? Nullable.GetUnderlyingType(type)! : type;
+
+        // Handle enums
+        if (underlyingType.IsEnum)
+        {
+            return Enum.Parse(underlyingType, stringValue, ignoreCase: true);
+        }
+
+        // Handle Guid
+        if (underlyingType == typeof(Guid))
+        {
+            return Guid.Parse(stringValue);
+        }
+
+        // Handle other primitives using Convert.ChangeType
+        return Convert.ChangeType(stringValue, underlyingType, CultureInfo.InvariantCulture);
     }
 
-    private static string ConvertToString( object value )
+    private static object? GetDefaultValue(Type type)
     {
-        return Convert.ToString( value, CultureInfo.InvariantCulture );
+        if (type.IsValueType && Nullable.GetUnderlyingType(type) == null)
+        {
+            return Activator.CreateInstance(type);
+        }
+        return null;
+    }
+
+    private static bool IsNullableType(this Type type)
+    {
+        return Nullable.GetUnderlyingType(type) != null;
+    }
+
+    private static string ConvertToString( object? value )
+    {
+        if (value is null)
+            return string.Empty;
+
+        // Handle enums - use the underlying value or the enum name
+        var type = value.GetType();
+        if (type.IsEnum)
+        {
+            return value.ToString()!;
+        }
+
+        return Convert.ToString( value, CultureInfo.InvariantCulture ) ?? string.Empty;
     }
 
     private static PropertyInfo[] GetProperties<T>()

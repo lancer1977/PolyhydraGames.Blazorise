@@ -6,13 +6,6 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="SimpleDialogs\**" />
-    <Content Remove="SimpleDialogs\**" />
-    <EmbeddedResource Remove="SimpleDialogs\**" />
-    <None Remove="SimpleDialogs\**" />
-  </ItemGroup>
-
 
   <ItemGroup>
     <SupportedPlatform Include="browser" />
