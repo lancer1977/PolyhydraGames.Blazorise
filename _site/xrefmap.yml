@@ -1,6 +1,200 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: BlazorComponents.Tests.QueryStrings
+  name: BlazorComponents.Tests.QueryStrings
+  href: api/BlazorComponents.Tests.QueryStrings.html
+  commentId: N:BlazorComponents.Tests.QueryStrings
+  fullName: BlazorComponents.Tests.QueryStrings
+  nameWithType: BlazorComponents.Tests.QueryStrings
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests
+  name: QueryStringParameterExtensionsTests
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html
+  commentId: T:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests
+  nameWithType: QueryStringParameterExtensionsTests
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithBool_ReturnsCorrectValue
+  name: ConvertValue_WithBool_ReturnsCorrectValue()
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithBool_ReturnsCorrectValue
+  commentId: M:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithBool_ReturnsCorrectValue
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithBool_ReturnsCorrectValue()
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithBool_ReturnsCorrectValue()
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithBool_ReturnsCorrectValue*
+  name: ConvertValue_WithBool_ReturnsCorrectValue
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithBool_ReturnsCorrectValue_
+  commentId: Overload:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithBool_ReturnsCorrectValue
+  isSpec: "True"
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithBool_ReturnsCorrectValue
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithBool_ReturnsCorrectValue
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithEmptyStringForNonNullableInt_ReturnsDefault
+  name: ConvertValue_WithEmptyStringForNonNullableInt_ReturnsDefault()
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithEmptyStringForNonNullableInt_ReturnsDefault
+  commentId: M:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithEmptyStringForNonNullableInt_ReturnsDefault
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithEmptyStringForNonNullableInt_ReturnsDefault()
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithEmptyStringForNonNullableInt_ReturnsDefault()
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithEmptyStringForNonNullableInt_ReturnsDefault*
+  name: ConvertValue_WithEmptyStringForNonNullableInt_ReturnsDefault
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithEmptyStringForNonNullableInt_ReturnsDefault_
+  commentId: Overload:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithEmptyStringForNonNullableInt_ReturnsDefault
+  isSpec: "True"
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithEmptyStringForNonNullableInt_ReturnsDefault
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithEmptyStringForNonNullableInt_ReturnsDefault
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithEmptyStringForNullableInt_ReturnsNull
+  name: ConvertValue_WithEmptyStringForNullableInt_ReturnsNull()
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithEmptyStringForNullableInt_ReturnsNull
+  commentId: M:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithEmptyStringForNullableInt_ReturnsNull
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithEmptyStringForNullableInt_ReturnsNull()
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithEmptyStringForNullableInt_ReturnsNull()
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithEmptyStringForNullableInt_ReturnsNull*
+  name: ConvertValue_WithEmptyStringForNullableInt_ReturnsNull
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithEmptyStringForNullableInt_ReturnsNull_
+  commentId: Overload:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithEmptyStringForNullableInt_ReturnsNull
+  isSpec: "True"
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithEmptyStringForNullableInt_ReturnsNull
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithEmptyStringForNullableInt_ReturnsNull
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithEnumCaseInsensitive_ReturnsCorrectValue
+  name: ConvertValue_WithEnumCaseInsensitive_ReturnsCorrectValue()
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithEnumCaseInsensitive_ReturnsCorrectValue
+  commentId: M:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithEnumCaseInsensitive_ReturnsCorrectValue
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithEnumCaseInsensitive_ReturnsCorrectValue()
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithEnumCaseInsensitive_ReturnsCorrectValue()
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithEnumCaseInsensitive_ReturnsCorrectValue*
+  name: ConvertValue_WithEnumCaseInsensitive_ReturnsCorrectValue
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithEnumCaseInsensitive_ReturnsCorrectValue_
+  commentId: Overload:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithEnumCaseInsensitive_ReturnsCorrectValue
+  isSpec: "True"
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithEnumCaseInsensitive_ReturnsCorrectValue
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithEnumCaseInsensitive_ReturnsCorrectValue
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithEnum_ReturnsCorrectValue
+  name: ConvertValue_WithEnum_ReturnsCorrectValue()
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithEnum_ReturnsCorrectValue
+  commentId: M:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithEnum_ReturnsCorrectValue
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithEnum_ReturnsCorrectValue()
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithEnum_ReturnsCorrectValue()
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithEnum_ReturnsCorrectValue*
+  name: ConvertValue_WithEnum_ReturnsCorrectValue
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithEnum_ReturnsCorrectValue_
+  commentId: Overload:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithEnum_ReturnsCorrectValue
+  isSpec: "True"
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithEnum_ReturnsCorrectValue
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithEnum_ReturnsCorrectValue
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithGuid_ReturnsCorrectValue
+  name: ConvertValue_WithGuid_ReturnsCorrectValue()
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithGuid_ReturnsCorrectValue
+  commentId: M:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithGuid_ReturnsCorrectValue
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithGuid_ReturnsCorrectValue()
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithGuid_ReturnsCorrectValue()
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithGuid_ReturnsCorrectValue*
+  name: ConvertValue_WithGuid_ReturnsCorrectValue
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithGuid_ReturnsCorrectValue_
+  commentId: Overload:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithGuid_ReturnsCorrectValue
+  isSpec: "True"
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithGuid_ReturnsCorrectValue
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithGuid_ReturnsCorrectValue
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithInt_ReturnsCorrectValue
+  name: ConvertValue_WithInt_ReturnsCorrectValue()
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithInt_ReturnsCorrectValue
+  commentId: M:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithInt_ReturnsCorrectValue
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithInt_ReturnsCorrectValue()
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithInt_ReturnsCorrectValue()
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithInt_ReturnsCorrectValue*
+  name: ConvertValue_WithInt_ReturnsCorrectValue
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithInt_ReturnsCorrectValue_
+  commentId: Overload:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithInt_ReturnsCorrectValue
+  isSpec: "True"
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithInt_ReturnsCorrectValue
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithInt_ReturnsCorrectValue
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableBool_ReturnsCorrectValue
+  name: ConvertValue_WithNullableBool_ReturnsCorrectValue()
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithNullableBool_ReturnsCorrectValue
+  commentId: M:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableBool_ReturnsCorrectValue
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableBool_ReturnsCorrectValue()
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithNullableBool_ReturnsCorrectValue()
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableBool_ReturnsCorrectValue*
+  name: ConvertValue_WithNullableBool_ReturnsCorrectValue
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithNullableBool_ReturnsCorrectValue_
+  commentId: Overload:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableBool_ReturnsCorrectValue
+  isSpec: "True"
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableBool_ReturnsCorrectValue
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithNullableBool_ReturnsCorrectValue
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableEnumNullValue_ReturnsNull
+  name: ConvertValue_WithNullableEnumNullValue_ReturnsNull()
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithNullableEnumNullValue_ReturnsNull
+  commentId: M:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableEnumNullValue_ReturnsNull
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableEnumNullValue_ReturnsNull()
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithNullableEnumNullValue_ReturnsNull()
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableEnumNullValue_ReturnsNull*
+  name: ConvertValue_WithNullableEnumNullValue_ReturnsNull
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithNullableEnumNullValue_ReturnsNull_
+  commentId: Overload:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableEnumNullValue_ReturnsNull
+  isSpec: "True"
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableEnumNullValue_ReturnsNull
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithNullableEnumNullValue_ReturnsNull
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableEnum_ReturnsCorrectValue
+  name: ConvertValue_WithNullableEnum_ReturnsCorrectValue()
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithNullableEnum_ReturnsCorrectValue
+  commentId: M:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableEnum_ReturnsCorrectValue
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableEnum_ReturnsCorrectValue()
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithNullableEnum_ReturnsCorrectValue()
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableEnum_ReturnsCorrectValue*
+  name: ConvertValue_WithNullableEnum_ReturnsCorrectValue
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithNullableEnum_ReturnsCorrectValue_
+  commentId: Overload:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableEnum_ReturnsCorrectValue
+  isSpec: "True"
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableEnum_ReturnsCorrectValue
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithNullableEnum_ReturnsCorrectValue
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableGuidNullValue_ReturnsNull
+  name: ConvertValue_WithNullableGuidNullValue_ReturnsNull()
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithNullableGuidNullValue_ReturnsNull
+  commentId: M:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableGuidNullValue_ReturnsNull
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableGuidNullValue_ReturnsNull()
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithNullableGuidNullValue_ReturnsNull()
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableGuidNullValue_ReturnsNull*
+  name: ConvertValue_WithNullableGuidNullValue_ReturnsNull
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithNullableGuidNullValue_ReturnsNull_
+  commentId: Overload:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableGuidNullValue_ReturnsNull
+  isSpec: "True"
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableGuidNullValue_ReturnsNull
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithNullableGuidNullValue_ReturnsNull
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableGuid_ReturnsCorrectValue
+  name: ConvertValue_WithNullableGuid_ReturnsCorrectValue()
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithNullableGuid_ReturnsCorrectValue
+  commentId: M:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableGuid_ReturnsCorrectValue
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableGuid_ReturnsCorrectValue()
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithNullableGuid_ReturnsCorrectValue()
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableGuid_ReturnsCorrectValue*
+  name: ConvertValue_WithNullableGuid_ReturnsCorrectValue
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithNullableGuid_ReturnsCorrectValue_
+  commentId: Overload:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableGuid_ReturnsCorrectValue
+  isSpec: "True"
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableGuid_ReturnsCorrectValue
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithNullableGuid_ReturnsCorrectValue
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableIntNullValue_ReturnsNull
+  name: ConvertValue_WithNullableIntNullValue_ReturnsNull()
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithNullableIntNullValue_ReturnsNull
+  commentId: M:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableIntNullValue_ReturnsNull
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableIntNullValue_ReturnsNull()
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithNullableIntNullValue_ReturnsNull()
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableIntNullValue_ReturnsNull*
+  name: ConvertValue_WithNullableIntNullValue_ReturnsNull
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithNullableIntNullValue_ReturnsNull_
+  commentId: Overload:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableIntNullValue_ReturnsNull
+  isSpec: "True"
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableIntNullValue_ReturnsNull
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithNullableIntNullValue_ReturnsNull
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableInt_ReturnsCorrectValue
+  name: ConvertValue_WithNullableInt_ReturnsCorrectValue()
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithNullableInt_ReturnsCorrectValue
+  commentId: M:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableInt_ReturnsCorrectValue
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableInt_ReturnsCorrectValue()
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithNullableInt_ReturnsCorrectValue()
+- uid: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableInt_ReturnsCorrectValue*
+  name: ConvertValue_WithNullableInt_ReturnsCorrectValue
+  href: api/BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.html#BlazorComponents_Tests_QueryStrings_QueryStringParameterExtensionsTests_ConvertValue_WithNullableInt_ReturnsCorrectValue_
+  commentId: Overload:BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableInt_ReturnsCorrectValue
+  isSpec: "True"
+  fullName: BlazorComponents.Tests.QueryStrings.QueryStringParameterExtensionsTests.ConvertValue_WithNullableInt_ReturnsCorrectValue
+  nameWithType: QueryStringParameterExtensionsTests.ConvertValue_WithNullableInt_ReturnsCorrectValue
 - uid: PolyhydraGames.BlazorComponents
   name: PolyhydraGames.BlazorComponents
   href: api/PolyhydraGames.BlazorComponents.html
@@ -13,6 +207,320 @@ references:
   commentId: N:PolyhydraGames.BlazorComponents.Components
   fullName: PolyhydraGames.BlazorComponents.Components
   nameWithType: PolyhydraGames.BlazorComponents.Components
+- uid: PolyhydraGames.BlazorComponents.Components.Busy
+  name: Busy
+  href: api/PolyhydraGames.BlazorComponents.Components.Busy.html
+  commentId: T:PolyhydraGames.BlazorComponents.Components.Busy
+  fullName: PolyhydraGames.BlazorComponents.Components.Busy
+  nameWithType: Busy
+- uid: PolyhydraGames.BlazorComponents.Components.Busy.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  name: BuildRenderTree(RenderTreeBuilder)
+  href: api/PolyhydraGames.BlazorComponents.Components.Busy.html#PolyhydraGames_BlazorComponents_Components_Busy_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
+  commentId: M:PolyhydraGames.BlazorComponents.Components.Busy.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  fullName: PolyhydraGames.BlazorComponents.Components.Busy.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  nameWithType: Busy.BuildRenderTree(RenderTreeBuilder)
+- uid: PolyhydraGames.BlazorComponents.Components.Busy.BuildRenderTree*
+  name: BuildRenderTree
+  href: api/PolyhydraGames.BlazorComponents.Components.Busy.html#PolyhydraGames_BlazorComponents_Components_Busy_BuildRenderTree_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Components.Busy.BuildRenderTree
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Components.Busy.BuildRenderTree
+  nameWithType: Busy.BuildRenderTree
+- uid: PolyhydraGames.BlazorComponents.Components.Busy.ChildContent
+  name: ChildContent
+  href: api/PolyhydraGames.BlazorComponents.Components.Busy.html#PolyhydraGames_BlazorComponents_Components_Busy_ChildContent
+  commentId: P:PolyhydraGames.BlazorComponents.Components.Busy.ChildContent
+  fullName: PolyhydraGames.BlazorComponents.Components.Busy.ChildContent
+  nameWithType: Busy.ChildContent
+- uid: PolyhydraGames.BlazorComponents.Components.Busy.ChildContent*
+  name: ChildContent
+  href: api/PolyhydraGames.BlazorComponents.Components.Busy.html#PolyhydraGames_BlazorComponents_Components_Busy_ChildContent_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Components.Busy.ChildContent
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Components.Busy.ChildContent
+  nameWithType: Busy.ChildContent
+- uid: PolyhydraGames.BlazorComponents.Components.Busy.IsBusy
+  name: IsBusy
+  href: api/PolyhydraGames.BlazorComponents.Components.Busy.html#PolyhydraGames_BlazorComponents_Components_Busy_IsBusy
+  commentId: P:PolyhydraGames.BlazorComponents.Components.Busy.IsBusy
+  fullName: PolyhydraGames.BlazorComponents.Components.Busy.IsBusy
+  nameWithType: Busy.IsBusy
+- uid: PolyhydraGames.BlazorComponents.Components.Busy.IsBusy*
+  name: IsBusy
+  href: api/PolyhydraGames.BlazorComponents.Components.Busy.html#PolyhydraGames_BlazorComponents_Components_Busy_IsBusy_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Components.Busy.IsBusy
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Components.Busy.IsBusy
+  nameWithType: Busy.IsBusy
+- uid: PolyhydraGames.BlazorComponents.Components.Busy.Message
+  name: Message
+  href: api/PolyhydraGames.BlazorComponents.Components.Busy.html#PolyhydraGames_BlazorComponents_Components_Busy_Message
+  commentId: P:PolyhydraGames.BlazorComponents.Components.Busy.Message
+  fullName: PolyhydraGames.BlazorComponents.Components.Busy.Message
+  nameWithType: Busy.Message
+- uid: PolyhydraGames.BlazorComponents.Components.Busy.Message*
+  name: Message
+  href: api/PolyhydraGames.BlazorComponents.Components.Busy.html#PolyhydraGames_BlazorComponents_Components_Busy_Message_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Components.Busy.Message
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Components.Busy.Message
+  nameWithType: Busy.Message
+- uid: PolyhydraGames.BlazorComponents.Components.NavItem
+  name: NavItem
+  href: api/PolyhydraGames.BlazorComponents.Components.NavItem.html
+  commentId: T:PolyhydraGames.BlazorComponents.Components.NavItem
+  fullName: PolyhydraGames.BlazorComponents.Components.NavItem
+  nameWithType: NavItem
+- uid: PolyhydraGames.BlazorComponents.Components.NavItem.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  name: BuildRenderTree(RenderTreeBuilder)
+  href: api/PolyhydraGames.BlazorComponents.Components.NavItem.html#PolyhydraGames_BlazorComponents_Components_NavItem_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
+  commentId: M:PolyhydraGames.BlazorComponents.Components.NavItem.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  fullName: PolyhydraGames.BlazorComponents.Components.NavItem.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  nameWithType: NavItem.BuildRenderTree(RenderTreeBuilder)
+- uid: PolyhydraGames.BlazorComponents.Components.NavItem.BuildRenderTree*
+  name: BuildRenderTree
+  href: api/PolyhydraGames.BlazorComponents.Components.NavItem.html#PolyhydraGames_BlazorComponents_Components_NavItem_BuildRenderTree_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Components.NavItem.BuildRenderTree
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Components.NavItem.BuildRenderTree
+  nameWithType: NavItem.BuildRenderTree
+- uid: PolyhydraGames.BlazorComponents.Components.NavItem.Icon
+  name: Icon
+  href: api/PolyhydraGames.BlazorComponents.Components.NavItem.html#PolyhydraGames_BlazorComponents_Components_NavItem_Icon
+  commentId: P:PolyhydraGames.BlazorComponents.Components.NavItem.Icon
+  fullName: PolyhydraGames.BlazorComponents.Components.NavItem.Icon
+  nameWithType: NavItem.Icon
+- uid: PolyhydraGames.BlazorComponents.Components.NavItem.Icon*
+  name: Icon
+  href: api/PolyhydraGames.BlazorComponents.Components.NavItem.html#PolyhydraGames_BlazorComponents_Components_NavItem_Icon_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Components.NavItem.Icon
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Components.NavItem.Icon
+  nameWithType: NavItem.Icon
+- uid: PolyhydraGames.BlazorComponents.Components.NavItem.Title
+  name: Title
+  href: api/PolyhydraGames.BlazorComponents.Components.NavItem.html#PolyhydraGames_BlazorComponents_Components_NavItem_Title
+  commentId: P:PolyhydraGames.BlazorComponents.Components.NavItem.Title
+  fullName: PolyhydraGames.BlazorComponents.Components.NavItem.Title
+  nameWithType: NavItem.Title
+- uid: PolyhydraGames.BlazorComponents.Components.NavItem.Title*
+  name: Title
+  href: api/PolyhydraGames.BlazorComponents.Components.NavItem.html#PolyhydraGames_BlazorComponents_Components_NavItem_Title_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Components.NavItem.Title
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Components.NavItem.Title
+  nameWithType: NavItem.Title
+- uid: PolyhydraGames.BlazorComponents.Components.NavItem.Uri
+  name: Uri
+  href: api/PolyhydraGames.BlazorComponents.Components.NavItem.html#PolyhydraGames_BlazorComponents_Components_NavItem_Uri
+  commentId: P:PolyhydraGames.BlazorComponents.Components.NavItem.Uri
+  fullName: PolyhydraGames.BlazorComponents.Components.NavItem.Uri
+  nameWithType: NavItem.Uri
+- uid: PolyhydraGames.BlazorComponents.Components.NavItem.Uri*
+  name: Uri
+  href: api/PolyhydraGames.BlazorComponents.Components.NavItem.html#PolyhydraGames_BlazorComponents_Components_NavItem_Uri_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Components.NavItem.Uri
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Components.NavItem.Uri
+  nameWithType: NavItem.Uri
+- uid: PolyhydraGames.BlazorComponents.Components.Picker`1
+  name: Picker<T>
+  href: api/PolyhydraGames.BlazorComponents.Components.Picker-1.html
+  commentId: T:PolyhydraGames.BlazorComponents.Components.Picker`1
+  name.vb: Picker(Of T)
+  fullName: PolyhydraGames.BlazorComponents.Components.Picker<T>
+  fullName.vb: PolyhydraGames.BlazorComponents.Components.Picker(Of T)
+  nameWithType: Picker<T>
+  nameWithType.vb: Picker(Of T)
+- uid: PolyhydraGames.BlazorComponents.Components.Picker`1.#ctor
+  name: Picker()
+  href: api/PolyhydraGames.BlazorComponents.Components.Picker-1.html#PolyhydraGames_BlazorComponents_Components_Picker_1__ctor
+  commentId: M:PolyhydraGames.BlazorComponents.Components.Picker`1.#ctor
+  name.vb: New()
+  fullName: PolyhydraGames.BlazorComponents.Components.Picker<T>.Picker()
+  fullName.vb: PolyhydraGames.BlazorComponents.Components.Picker(Of T).New()
+  nameWithType: Picker<T>.Picker()
+  nameWithType.vb: Picker(Of T).New()
+- uid: PolyhydraGames.BlazorComponents.Components.Picker`1.#ctor*
+  name: Picker
+  href: api/PolyhydraGames.BlazorComponents.Components.Picker-1.html#PolyhydraGames_BlazorComponents_Components_Picker_1__ctor_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Components.Picker`1.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: PolyhydraGames.BlazorComponents.Components.Picker<T>.Picker
+  fullName.vb: PolyhydraGames.BlazorComponents.Components.Picker(Of T).New
+  nameWithType: Picker<T>.Picker
+  nameWithType.vb: Picker(Of T).New
+- uid: PolyhydraGames.BlazorComponents.Components.Picker`1.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  name: BuildRenderTree(RenderTreeBuilder)
+  href: api/PolyhydraGames.BlazorComponents.Components.Picker-1.html#PolyhydraGames_BlazorComponents_Components_Picker_1_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
+  commentId: M:PolyhydraGames.BlazorComponents.Components.Picker`1.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  fullName: PolyhydraGames.BlazorComponents.Components.Picker<T>.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  fullName.vb: PolyhydraGames.BlazorComponents.Components.Picker(Of T).BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  nameWithType: Picker<T>.BuildRenderTree(RenderTreeBuilder)
+  nameWithType.vb: Picker(Of T).BuildRenderTree(RenderTreeBuilder)
+- uid: PolyhydraGames.BlazorComponents.Components.Picker`1.BuildRenderTree*
+  name: BuildRenderTree
+  href: api/PolyhydraGames.BlazorComponents.Components.Picker-1.html#PolyhydraGames_BlazorComponents_Components_Picker_1_BuildRenderTree_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Components.Picker`1.BuildRenderTree
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Components.Picker<T>.BuildRenderTree
+  fullName.vb: PolyhydraGames.BlazorComponents.Components.Picker(Of T).BuildRenderTree
+  nameWithType: Picker<T>.BuildRenderTree
+  nameWithType.vb: Picker(Of T).BuildRenderTree
+- uid: PolyhydraGames.BlazorComponents.Components.Picker`1.ChildContent
+  name: ChildContent
+  href: api/PolyhydraGames.BlazorComponents.Components.Picker-1.html#PolyhydraGames_BlazorComponents_Components_Picker_1_ChildContent
+  commentId: P:PolyhydraGames.BlazorComponents.Components.Picker`1.ChildContent
+  fullName: PolyhydraGames.BlazorComponents.Components.Picker<T>.ChildContent
+  fullName.vb: PolyhydraGames.BlazorComponents.Components.Picker(Of T).ChildContent
+  nameWithType: Picker<T>.ChildContent
+  nameWithType.vb: Picker(Of T).ChildContent
+- uid: PolyhydraGames.BlazorComponents.Components.Picker`1.ChildContent*
+  name: ChildContent
+  href: api/PolyhydraGames.BlazorComponents.Components.Picker-1.html#PolyhydraGames_BlazorComponents_Components_Picker_1_ChildContent_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Components.Picker`1.ChildContent
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Components.Picker<T>.ChildContent
+  fullName.vb: PolyhydraGames.BlazorComponents.Components.Picker(Of T).ChildContent
+  nameWithType: Picker<T>.ChildContent
+  nameWithType.vb: Picker(Of T).ChildContent
+- uid: PolyhydraGames.BlazorComponents.Components.Picker`1.GetTitle
+  name: GetTitle
+  href: api/PolyhydraGames.BlazorComponents.Components.Picker-1.html#PolyhydraGames_BlazorComponents_Components_Picker_1_GetTitle
+  commentId: P:PolyhydraGames.BlazorComponents.Components.Picker`1.GetTitle
+  fullName: PolyhydraGames.BlazorComponents.Components.Picker<T>.GetTitle
+  fullName.vb: PolyhydraGames.BlazorComponents.Components.Picker(Of T).GetTitle
+  nameWithType: Picker<T>.GetTitle
+  nameWithType.vb: Picker(Of T).GetTitle
+- uid: PolyhydraGames.BlazorComponents.Components.Picker`1.GetTitle*
+  name: GetTitle
+  href: api/PolyhydraGames.BlazorComponents.Components.Picker-1.html#PolyhydraGames_BlazorComponents_Components_Picker_1_GetTitle_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Components.Picker`1.GetTitle
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Components.Picker<T>.GetTitle
+  fullName.vb: PolyhydraGames.BlazorComponents.Components.Picker(Of T).GetTitle
+  nameWithType: Picker<T>.GetTitle
+  nameWithType.vb: Picker(Of T).GetTitle
+- uid: PolyhydraGames.BlazorComponents.Components.Picker`1.Items
+  name: Items
+  href: api/PolyhydraGames.BlazorComponents.Components.Picker-1.html#PolyhydraGames_BlazorComponents_Components_Picker_1_Items
+  commentId: P:PolyhydraGames.BlazorComponents.Components.Picker`1.Items
+  fullName: PolyhydraGames.BlazorComponents.Components.Picker<T>.Items
+  fullName.vb: PolyhydraGames.BlazorComponents.Components.Picker(Of T).Items
+  nameWithType: Picker<T>.Items
+  nameWithType.vb: Picker(Of T).Items
+- uid: PolyhydraGames.BlazorComponents.Components.Picker`1.Items*
+  name: Items
+  href: api/PolyhydraGames.BlazorComponents.Components.Picker-1.html#PolyhydraGames_BlazorComponents_Components_Picker_1_Items_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Components.Picker`1.Items
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Components.Picker<T>.Items
+  fullName.vb: PolyhydraGames.BlazorComponents.Components.Picker(Of T).Items
+  nameWithType: Picker<T>.Items
+  nameWithType.vb: Picker(Of T).Items
+- uid: PolyhydraGames.BlazorComponents.Components.Picker`1.OnInitialized
+  name: OnInitialized()
+  href: api/PolyhydraGames.BlazorComponents.Components.Picker-1.html#PolyhydraGames_BlazorComponents_Components_Picker_1_OnInitialized
+  commentId: M:PolyhydraGames.BlazorComponents.Components.Picker`1.OnInitialized
+  fullName: PolyhydraGames.BlazorComponents.Components.Picker<T>.OnInitialized()
+  fullName.vb: PolyhydraGames.BlazorComponents.Components.Picker(Of T).OnInitialized()
+  nameWithType: Picker<T>.OnInitialized()
+  nameWithType.vb: Picker(Of T).OnInitialized()
+- uid: PolyhydraGames.BlazorComponents.Components.Picker`1.OnInitialized*
+  name: OnInitialized
+  href: api/PolyhydraGames.BlazorComponents.Components.Picker-1.html#PolyhydraGames_BlazorComponents_Components_Picker_1_OnInitialized_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Components.Picker`1.OnInitialized
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Components.Picker<T>.OnInitialized
+  fullName.vb: PolyhydraGames.BlazorComponents.Components.Picker(Of T).OnInitialized
+  nameWithType: Picker<T>.OnInitialized
+  nameWithType.vb: Picker(Of T).OnInitialized
+- uid: PolyhydraGames.BlazorComponents.Components.Picker`1.OnParametersSet
+  name: OnParametersSet()
+  href: api/PolyhydraGames.BlazorComponents.Components.Picker-1.html#PolyhydraGames_BlazorComponents_Components_Picker_1_OnParametersSet
+  commentId: M:PolyhydraGames.BlazorComponents.Components.Picker`1.OnParametersSet
+  fullName: PolyhydraGames.BlazorComponents.Components.Picker<T>.OnParametersSet()
+  fullName.vb: PolyhydraGames.BlazorComponents.Components.Picker(Of T).OnParametersSet()
+  nameWithType: Picker<T>.OnParametersSet()
+  nameWithType.vb: Picker(Of T).OnParametersSet()
+- uid: PolyhydraGames.BlazorComponents.Components.Picker`1.OnParametersSet*
+  name: OnParametersSet
+  href: api/PolyhydraGames.BlazorComponents.Components.Picker-1.html#PolyhydraGames_BlazorComponents_Components_Picker_1_OnParametersSet_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Components.Picker`1.OnParametersSet
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Components.Picker<T>.OnParametersSet
+  fullName.vb: PolyhydraGames.BlazorComponents.Components.Picker(Of T).OnParametersSet
+  nameWithType: Picker<T>.OnParametersSet
+  nameWithType.vb: Picker(Of T).OnParametersSet
+- uid: PolyhydraGames.BlazorComponents.Components.Picker`1.PlaceHolder
+  name: PlaceHolder
+  href: api/PolyhydraGames.BlazorComponents.Components.Picker-1.html#PolyhydraGames_BlazorComponents_Components_Picker_1_PlaceHolder
+  commentId: P:PolyhydraGames.BlazorComponents.Components.Picker`1.PlaceHolder
+  fullName: PolyhydraGames.BlazorComponents.Components.Picker<T>.PlaceHolder
+  fullName.vb: PolyhydraGames.BlazorComponents.Components.Picker(Of T).PlaceHolder
+  nameWithType: Picker<T>.PlaceHolder
+  nameWithType.vb: Picker(Of T).PlaceHolder
+- uid: PolyhydraGames.BlazorComponents.Components.Picker`1.PlaceHolder*
+  name: PlaceHolder
+  href: api/PolyhydraGames.BlazorComponents.Components.Picker-1.html#PolyhydraGames_BlazorComponents_Components_Picker_1_PlaceHolder_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Components.Picker`1.PlaceHolder
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Components.Picker<T>.PlaceHolder
+  fullName.vb: PolyhydraGames.BlazorComponents.Components.Picker(Of T).PlaceHolder
+  nameWithType: Picker<T>.PlaceHolder
+  nameWithType.vb: Picker(Of T).PlaceHolder
+- uid: PolyhydraGames.BlazorComponents.Components.Picker`1.Title
+  name: Title
+  href: api/PolyhydraGames.BlazorComponents.Components.Picker-1.html#PolyhydraGames_BlazorComponents_Components_Picker_1_Title
+  commentId: P:PolyhydraGames.BlazorComponents.Components.Picker`1.Title
+  fullName: PolyhydraGames.BlazorComponents.Components.Picker<T>.Title
+  fullName.vb: PolyhydraGames.BlazorComponents.Components.Picker(Of T).Title
+  nameWithType: Picker<T>.Title
+  nameWithType.vb: Picker(Of T).Title
+- uid: PolyhydraGames.BlazorComponents.Components.Picker`1.Title*
+  name: Title
+  href: api/PolyhydraGames.BlazorComponents.Components.Picker-1.html#PolyhydraGames_BlazorComponents_Components_Picker_1_Title_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Components.Picker`1.Title
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Components.Picker<T>.Title
+  fullName.vb: PolyhydraGames.BlazorComponents.Components.Picker(Of T).Title
+  nameWithType: Picker<T>.Title
+  nameWithType.vb: Picker(Of T).Title
+- uid: PolyhydraGames.BlazorComponents.Components.Picker`1.Value
+  name: Value
+  href: api/PolyhydraGames.BlazorComponents.Components.Picker-1.html#PolyhydraGames_BlazorComponents_Components_Picker_1_Value
+  commentId: P:PolyhydraGames.BlazorComponents.Components.Picker`1.Value
+  fullName: PolyhydraGames.BlazorComponents.Components.Picker<T>.Value
+  fullName.vb: PolyhydraGames.BlazorComponents.Components.Picker(Of T).Value
+  nameWithType: Picker<T>.Value
+  nameWithType.vb: Picker(Of T).Value
+- uid: PolyhydraGames.BlazorComponents.Components.Picker`1.Value*
+  name: Value
+  href: api/PolyhydraGames.BlazorComponents.Components.Picker-1.html#PolyhydraGames_BlazorComponents_Components_Picker_1_Value_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Components.Picker`1.Value
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Components.Picker<T>.Value
+  fullName.vb: PolyhydraGames.BlazorComponents.Components.Picker(Of T).Value
+  nameWithType: Picker<T>.Value
+  nameWithType.vb: Picker(Of T).Value
+- uid: PolyhydraGames.BlazorComponents.Components.Picker`1.ValueChanged
+  name: ValueChanged
+  href: api/PolyhydraGames.BlazorComponents.Components.Picker-1.html#PolyhydraGames_BlazorComponents_Components_Picker_1_ValueChanged
+  commentId: P:PolyhydraGames.BlazorComponents.Components.Picker`1.ValueChanged
+  fullName: PolyhydraGames.BlazorComponents.Components.Picker<T>.ValueChanged
+  fullName.vb: PolyhydraGames.BlazorComponents.Components.Picker(Of T).ValueChanged
+  nameWithType: Picker<T>.ValueChanged
+  nameWithType.vb: Picker(Of T).ValueChanged
+- uid: PolyhydraGames.BlazorComponents.Components.Picker`1.ValueChanged*
+  name: ValueChanged
+  href: api/PolyhydraGames.BlazorComponents.Components.Picker-1.html#PolyhydraGames_BlazorComponents_Components_Picker_1_ValueChanged_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Components.Picker`1.ValueChanged
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Components.Picker<T>.ValueChanged
+  fullName.vb: PolyhydraGames.BlazorComponents.Components.Picker(Of T).ValueChanged
+  nameWithType: Picker<T>.ValueChanged
+  nameWithType.vb: Picker(Of T).ValueChanged
 - uid: PolyhydraGames.BlazorComponents.Components.PolyComponentBase`1
   name: PolyComponentBase<T>
   href: api/PolyhydraGames.BlazorComponents.Components.PolyComponentBase-1.html
@@ -368,19 +876,19 @@ references:
   commentId: T:PolyhydraGames.BlazorComponents.Config
   fullName: PolyhydraGames.BlazorComponents.Config
   nameWithType: Config
-- uid: PolyhydraGames.BlazorComponents.Config.AddBlazorComponents(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  name: AddBlazorComponents(IServiceCollection)
-  href: api/PolyhydraGames.BlazorComponents.Config.html#PolyhydraGames_BlazorComponents_Config_AddBlazorComponents_Microsoft_Extensions_DependencyInjection_IServiceCollection_
-  commentId: M:PolyhydraGames.BlazorComponents.Config.AddBlazorComponents(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  fullName: PolyhydraGames.BlazorComponents.Config.AddBlazorComponents(Microsoft.Extensions.DependencyInjection.IServiceCollection)
-  nameWithType: Config.AddBlazorComponents(IServiceCollection)
-- uid: PolyhydraGames.BlazorComponents.Config.AddBlazorComponents*
-  name: AddBlazorComponents
-  href: api/PolyhydraGames.BlazorComponents.Config.html#PolyhydraGames_BlazorComponents_Config_AddBlazorComponents_
-  commentId: Overload:PolyhydraGames.BlazorComponents.Config.AddBlazorComponents
+- uid: PolyhydraGames.BlazorComponents.Config.AddPolyDialogs(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name: AddPolyDialogs(IServiceCollection)
+  href: api/PolyhydraGames.BlazorComponents.Config.html#PolyhydraGames_BlazorComponents_Config_AddPolyDialogs_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  commentId: M:PolyhydraGames.BlazorComponents.Config.AddPolyDialogs(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  fullName: PolyhydraGames.BlazorComponents.Config.AddPolyDialogs(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: Config.AddPolyDialogs(IServiceCollection)
+- uid: PolyhydraGames.BlazorComponents.Config.AddPolyDialogs*
+  name: AddPolyDialogs
+  href: api/PolyhydraGames.BlazorComponents.Config.html#PolyhydraGames_BlazorComponents_Config_AddPolyDialogs_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Config.AddPolyDialogs
   isSpec: "True"
-  fullName: PolyhydraGames.BlazorComponents.Config.AddBlazorComponents
-  nameWithType: Config.AddBlazorComponents
+  fullName: PolyhydraGames.BlazorComponents.Config.AddPolyDialogs
+  nameWithType: Config.AddPolyDialogs
 - uid: PolyhydraGames.BlazorComponents.CurrentPage
   name: PolyhydraGames.BlazorComponents.CurrentPage
   href: api/PolyhydraGames.BlazorComponents.CurrentPage.html
@@ -397,15 +905,21 @@ references:
   name: CurrentPageService()
   href: api/PolyhydraGames.BlazorComponents.CurrentPage.CurrentPageService.html#PolyhydraGames_BlazorComponents_CurrentPage_CurrentPageService__ctor
   commentId: M:PolyhydraGames.BlazorComponents.CurrentPage.CurrentPageService.#ctor
+  name.vb: New()
   fullName: PolyhydraGames.BlazorComponents.CurrentPage.CurrentPageService.CurrentPageService()
+  fullName.vb: PolyhydraGames.BlazorComponents.CurrentPage.CurrentPageService.New()
   nameWithType: CurrentPageService.CurrentPageService()
+  nameWithType.vb: CurrentPageService.New()
 - uid: PolyhydraGames.BlazorComponents.CurrentPage.CurrentPageService.#ctor*
   name: CurrentPageService
   href: api/PolyhydraGames.BlazorComponents.CurrentPage.CurrentPageService.html#PolyhydraGames_BlazorComponents_CurrentPage_CurrentPageService__ctor_
   commentId: Overload:PolyhydraGames.BlazorComponents.CurrentPage.CurrentPageService.#ctor
   isSpec: "True"
+  name.vb: New
   fullName: PolyhydraGames.BlazorComponents.CurrentPage.CurrentPageService.CurrentPageService
+  fullName.vb: PolyhydraGames.BlazorComponents.CurrentPage.CurrentPageService.New
   nameWithType: CurrentPageService.CurrentPageService
+  nameWithType.vb: CurrentPageService.New
 - uid: PolyhydraGames.BlazorComponents.CurrentPage.CurrentPageService.NameChanged
   name: NameChanged
   href: api/PolyhydraGames.BlazorComponents.CurrentPage.CurrentPageService.html#PolyhydraGames_BlazorComponents_CurrentPage_CurrentPageService_NameChanged
@@ -420,11 +934,14 @@ references:
   fullName: PolyhydraGames.BlazorComponents.CurrentPage.CurrentPageService.NameChanged
   nameWithType: CurrentPageService.NameChanged
 - uid: PolyhydraGames.BlazorComponents.CurrentPage.CurrentPageService.SetName(System.String)
-  name: SetName(String)
+  name: SetName(string)
   href: api/PolyhydraGames.BlazorComponents.CurrentPage.CurrentPageService.html#PolyhydraGames_BlazorComponents_CurrentPage_CurrentPageService_SetName_System_String_
   commentId: M:PolyhydraGames.BlazorComponents.CurrentPage.CurrentPageService.SetName(System.String)
-  fullName: PolyhydraGames.BlazorComponents.CurrentPage.CurrentPageService.SetName(System.String)
-  nameWithType: CurrentPageService.SetName(String)
+  name.vb: SetName(String)
+  fullName: PolyhydraGames.BlazorComponents.CurrentPage.CurrentPageService.SetName(string)
+  fullName.vb: PolyhydraGames.BlazorComponents.CurrentPage.CurrentPageService.SetName(String)
+  nameWithType: CurrentPageService.SetName(string)
+  nameWithType.vb: CurrentPageService.SetName(String)
 - uid: PolyhydraGames.BlazorComponents.CurrentPage.CurrentPageService.SetName*
   name: SetName
   href: api/PolyhydraGames.BlazorComponents.CurrentPage.CurrentPageService.html#PolyhydraGames_BlazorComponents_CurrentPage_CurrentPageService_SetName_
@@ -452,11 +969,14 @@ references:
   fullName: PolyhydraGames.BlazorComponents.CurrentPage.ICurrentPage.NameChanged
   nameWithType: ICurrentPage.NameChanged
 - uid: PolyhydraGames.BlazorComponents.CurrentPage.ICurrentPage.SetName(System.String)
-  name: SetName(String)
+  name: SetName(string)
   href: api/PolyhydraGames.BlazorComponents.CurrentPage.ICurrentPage.html#PolyhydraGames_BlazorComponents_CurrentPage_ICurrentPage_SetName_System_String_
   commentId: M:PolyhydraGames.BlazorComponents.CurrentPage.ICurrentPage.SetName(System.String)
-  fullName: PolyhydraGames.BlazorComponents.CurrentPage.ICurrentPage.SetName(System.String)
-  nameWithType: ICurrentPage.SetName(String)
+  name.vb: SetName(String)
+  fullName: PolyhydraGames.BlazorComponents.CurrentPage.ICurrentPage.SetName(string)
+  fullName.vb: PolyhydraGames.BlazorComponents.CurrentPage.ICurrentPage.SetName(String)
+  nameWithType: ICurrentPage.SetName(string)
+  nameWithType.vb: ICurrentPage.SetName(String)
 - uid: PolyhydraGames.BlazorComponents.CurrentPage.ICurrentPage.SetName*
   name: SetName
   href: api/PolyhydraGames.BlazorComponents.CurrentPage.ICurrentPage.html#PolyhydraGames_BlazorComponents_CurrentPage_ICurrentPage_SetName_
@@ -613,23 +1133,32 @@ references:
   fullName: PolyhydraGames.BlazorComponents.Dialog.DialogRequest.SetResult()
   nameWithType: DialogRequest.SetResult()
 - uid: PolyhydraGames.BlazorComponents.Dialog.DialogRequest.SetResult(System.Boolean)
-  name: SetResult(Boolean)
+  name: SetResult(bool)
   href: api/PolyhydraGames.BlazorComponents.Dialog.DialogRequest.html#PolyhydraGames_BlazorComponents_Dialog_DialogRequest_SetResult_System_Boolean_
   commentId: M:PolyhydraGames.BlazorComponents.Dialog.DialogRequest.SetResult(System.Boolean)
-  fullName: PolyhydraGames.BlazorComponents.Dialog.DialogRequest.SetResult(System.Boolean)
-  nameWithType: DialogRequest.SetResult(Boolean)
+  name.vb: SetResult(Boolean)
+  fullName: PolyhydraGames.BlazorComponents.Dialog.DialogRequest.SetResult(bool)
+  fullName.vb: PolyhydraGames.BlazorComponents.Dialog.DialogRequest.SetResult(Boolean)
+  nameWithType: DialogRequest.SetResult(bool)
+  nameWithType.vb: DialogRequest.SetResult(Boolean)
 - uid: PolyhydraGames.BlazorComponents.Dialog.DialogRequest.SetResult(System.Int32,System.Boolean)
-  name: SetResult(Int32, Boolean)
+  name: SetResult(int, bool)
   href: api/PolyhydraGames.BlazorComponents.Dialog.DialogRequest.html#PolyhydraGames_BlazorComponents_Dialog_DialogRequest_SetResult_System_Int32_System_Boolean_
   commentId: M:PolyhydraGames.BlazorComponents.Dialog.DialogRequest.SetResult(System.Int32,System.Boolean)
-  fullName: PolyhydraGames.BlazorComponents.Dialog.DialogRequest.SetResult(System.Int32, System.Boolean)
-  nameWithType: DialogRequest.SetResult(Int32, Boolean)
+  name.vb: SetResult(Integer, Boolean)
+  fullName: PolyhydraGames.BlazorComponents.Dialog.DialogRequest.SetResult(int, bool)
+  fullName.vb: PolyhydraGames.BlazorComponents.Dialog.DialogRequest.SetResult(Integer, Boolean)
+  nameWithType: DialogRequest.SetResult(int, bool)
+  nameWithType.vb: DialogRequest.SetResult(Integer, Boolean)
 - uid: PolyhydraGames.BlazorComponents.Dialog.DialogRequest.SetResult(System.String)
-  name: SetResult(String)
+  name: SetResult(string)
   href: api/PolyhydraGames.BlazorComponents.Dialog.DialogRequest.html#PolyhydraGames_BlazorComponents_Dialog_DialogRequest_SetResult_System_String_
   commentId: M:PolyhydraGames.BlazorComponents.Dialog.DialogRequest.SetResult(System.String)
-  fullName: PolyhydraGames.BlazorComponents.Dialog.DialogRequest.SetResult(System.String)
-  nameWithType: DialogRequest.SetResult(String)
+  name.vb: SetResult(String)
+  fullName: PolyhydraGames.BlazorComponents.Dialog.DialogRequest.SetResult(string)
+  fullName.vb: PolyhydraGames.BlazorComponents.Dialog.DialogRequest.SetResult(String)
+  nameWithType: DialogRequest.SetResult(string)
+  nameWithType.vb: DialogRequest.SetResult(String)
 - uid: PolyhydraGames.BlazorComponents.Dialog.DialogRequest.SetResult*
   name: SetResult
   href: api/PolyhydraGames.BlazorComponents.Dialog.DialogRequest.html#PolyhydraGames_BlazorComponents_Dialog_DialogRequest_SetResult_
@@ -638,11 +1167,14 @@ references:
   fullName: PolyhydraGames.BlazorComponents.Dialog.DialogRequest.SetResult
   nameWithType: DialogRequest.SetResult
 - uid: PolyhydraGames.BlazorComponents.Dialog.DialogRequest.SetSelection(System.Object)
-  name: SetSelection(Object)
+  name: SetSelection(object)
   href: api/PolyhydraGames.BlazorComponents.Dialog.DialogRequest.html#PolyhydraGames_BlazorComponents_Dialog_DialogRequest_SetSelection_System_Object_
   commentId: M:PolyhydraGames.BlazorComponents.Dialog.DialogRequest.SetSelection(System.Object)
-  fullName: PolyhydraGames.BlazorComponents.Dialog.DialogRequest.SetSelection(System.Object)
-  nameWithType: DialogRequest.SetSelection(Object)
+  name.vb: SetSelection(Object)
+  fullName: PolyhydraGames.BlazorComponents.Dialog.DialogRequest.SetSelection(object)
+  fullName.vb: PolyhydraGames.BlazorComponents.Dialog.DialogRequest.SetSelection(Object)
+  nameWithType: DialogRequest.SetSelection(object)
+  nameWithType.vb: DialogRequest.SetSelection(Object)
 - uid: PolyhydraGames.BlazorComponents.Dialog.DialogRequest.SetSelection*
   name: SetSelection
   href: api/PolyhydraGames.BlazorComponents.Dialog.DialogRequest.html#PolyhydraGames_BlazorComponents_Dialog_DialogRequest_SetSelection_
@@ -738,27 +1270,30 @@ references:
   name: DialogResult()
   href: api/PolyhydraGames.BlazorComponents.Dialog.DialogResult-1.html#PolyhydraGames_BlazorComponents_Dialog_DialogResult_1__ctor
   commentId: M:PolyhydraGames.BlazorComponents.Dialog.DialogResult`1.#ctor
+  name.vb: New()
   fullName: PolyhydraGames.BlazorComponents.Dialog.DialogResult<T>.DialogResult()
-  fullName.vb: PolyhydraGames.BlazorComponents.Dialog.DialogResult(Of T).DialogResult()
+  fullName.vb: PolyhydraGames.BlazorComponents.Dialog.DialogResult(Of T).New()
   nameWithType: DialogResult<T>.DialogResult()
-  nameWithType.vb: DialogResult(Of T).DialogResult()
+  nameWithType.vb: DialogResult(Of T).New()
 - uid: PolyhydraGames.BlazorComponents.Dialog.DialogResult`1.#ctor(`0)
   name: DialogResult(T)
   href: api/PolyhydraGames.BlazorComponents.Dialog.DialogResult-1.html#PolyhydraGames_BlazorComponents_Dialog_DialogResult_1__ctor__0_
   commentId: M:PolyhydraGames.BlazorComponents.Dialog.DialogResult`1.#ctor(`0)
+  name.vb: New(T)
   fullName: PolyhydraGames.BlazorComponents.Dialog.DialogResult<T>.DialogResult(T)
-  fullName.vb: PolyhydraGames.BlazorComponents.Dialog.DialogResult(Of T).DialogResult(T)
+  fullName.vb: PolyhydraGames.BlazorComponents.Dialog.DialogResult(Of T).New(T)
   nameWithType: DialogResult<T>.DialogResult(T)
-  nameWithType.vb: DialogResult(Of T).DialogResult(T)
+  nameWithType.vb: DialogResult(Of T).New(T)
 - uid: PolyhydraGames.BlazorComponents.Dialog.DialogResult`1.#ctor*
   name: DialogResult
   href: api/PolyhydraGames.BlazorComponents.Dialog.DialogResult-1.html#PolyhydraGames_BlazorComponents_Dialog_DialogResult_1__ctor_
   commentId: Overload:PolyhydraGames.BlazorComponents.Dialog.DialogResult`1.#ctor
   isSpec: "True"
+  name.vb: New
   fullName: PolyhydraGames.BlazorComponents.Dialog.DialogResult<T>.DialogResult
-  fullName.vb: PolyhydraGames.BlazorComponents.Dialog.DialogResult(Of T).DialogResult
+  fullName.vb: PolyhydraGames.BlazorComponents.Dialog.DialogResult(Of T).New
   nameWithType: DialogResult<T>.DialogResult
-  nameWithType.vb: DialogResult(Of T).DialogResult
+  nameWithType.vb: DialogResult(Of T).New
 - uid: PolyhydraGames.BlazorComponents.Dialog.DialogResult`1.Ok
   name: Ok
   href: api/PolyhydraGames.BlazorComponents.Dialog.DialogResult-1.html#PolyhydraGames_BlazorComponents_Dialog_DialogResult_1_Ok
@@ -819,27 +1354,33 @@ references:
   fullName: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService
   nameWithType: ObservableDialogService
 - uid: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.#ctor(Microsoft.Extensions.Logging.ILogger{PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService})
-  name: ObservableDialogService(ILogger<ObservableDialogService>)
+  name: ObservableDialogService(ILogger<ObservableDialogService>?)
   href: api/PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.html#PolyhydraGames_BlazorComponents_Dialog_ObservableDialogService__ctor_Microsoft_Extensions_Logging_ILogger_PolyhydraGames_BlazorComponents_Dialog_ObservableDialogService__
   commentId: M:PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.#ctor(Microsoft.Extensions.Logging.ILogger{PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService})
-  name.vb: ObservableDialogService(ILogger(Of ObservableDialogService))
-  fullName: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.ObservableDialogService(Microsoft.Extensions.Logging.ILogger<PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService>)
-  fullName.vb: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.ObservableDialogService(Microsoft.Extensions.Logging.ILogger(Of PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService))
-  nameWithType: ObservableDialogService.ObservableDialogService(ILogger<ObservableDialogService>)
-  nameWithType.vb: ObservableDialogService.ObservableDialogService(ILogger(Of ObservableDialogService))
+  name.vb: New(ILogger(Of ObservableDialogService))
+  fullName: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.ObservableDialogService(Microsoft.Extensions.Logging.ILogger<PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService>?)
+  fullName.vb: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.New(Microsoft.Extensions.Logging.ILogger(Of PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService))
+  nameWithType: ObservableDialogService.ObservableDialogService(ILogger<ObservableDialogService>?)
+  nameWithType.vb: ObservableDialogService.New(ILogger(Of ObservableDialogService))
 - uid: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.#ctor*
   name: ObservableDialogService
   href: api/PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.html#PolyhydraGames_BlazorComponents_Dialog_ObservableDialogService__ctor_
   commentId: Overload:PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.#ctor
   isSpec: "True"
+  name.vb: New
   fullName: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.ObservableDialogService
+  fullName.vb: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.New
   nameWithType: ObservableDialogService.ObservableDialogService
+  nameWithType.vb: ObservableDialogService.New
 - uid: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.GetBooleanAsync(System.String,System.String,System.String,System.String)
-  name: GetBooleanAsync(String, String, String, String)
+  name: GetBooleanAsync(string, string, string, string)
   href: api/PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.html#PolyhydraGames_BlazorComponents_Dialog_ObservableDialogService_GetBooleanAsync_System_String_System_String_System_String_System_String_
   commentId: M:PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.GetBooleanAsync(System.String,System.String,System.String,System.String)
-  fullName: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.GetBooleanAsync(System.String, System.String, System.String, System.String)
-  nameWithType: ObservableDialogService.GetBooleanAsync(String, String, String, String)
+  name.vb: GetBooleanAsync(String, String, String, String)
+  fullName: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.GetBooleanAsync(string, string, string, string)
+  fullName.vb: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.GetBooleanAsync(String, String, String, String)
+  nameWithType: ObservableDialogService.GetBooleanAsync(string, string, string, string)
+  nameWithType.vb: ObservableDialogService.GetBooleanAsync(String, String, String, String)
 - uid: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.GetBooleanAsync*
   name: GetBooleanAsync
   href: api/PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.html#PolyhydraGames_BlazorComponents_Dialog_ObservableDialogService_GetBooleanAsync_
@@ -848,17 +1389,23 @@ references:
   fullName: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.GetBooleanAsync
   nameWithType: ObservableDialogService.GetBooleanAsync
 - uid: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.GetIntAsync(System.String,System.Int32,System.Int32,System.Int32)
-  name: GetIntAsync(String, Int32, Int32, Int32)
+  name: GetIntAsync(string, int, int, int)
   href: api/PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.html#PolyhydraGames_BlazorComponents_Dialog_ObservableDialogService_GetIntAsync_System_String_System_Int32_System_Int32_System_Int32_
   commentId: M:PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.GetIntAsync(System.String,System.Int32,System.Int32,System.Int32)
-  fullName: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.GetIntAsync(System.String, System.Int32, System.Int32, System.Int32)
-  nameWithType: ObservableDialogService.GetIntAsync(String, Int32, Int32, Int32)
+  name.vb: GetIntAsync(String, Integer, Integer, Integer)
+  fullName: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.GetIntAsync(string, int, int, int)
+  fullName.vb: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.GetIntAsync(String, Integer, Integer, Integer)
+  nameWithType: ObservableDialogService.GetIntAsync(string, int, int, int)
+  nameWithType.vb: ObservableDialogService.GetIntAsync(String, Integer, Integer, Integer)
 - uid: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.GetIntAsync(System.String,System.String,System.Int32)
-  name: GetIntAsync(String, String, Int32)
+  name: GetIntAsync(string, string, int)
   href: api/PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.html#PolyhydraGames_BlazorComponents_Dialog_ObservableDialogService_GetIntAsync_System_String_System_String_System_Int32_
   commentId: M:PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.GetIntAsync(System.String,System.String,System.Int32)
-  fullName: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.GetIntAsync(System.String, System.String, System.Int32)
-  nameWithType: ObservableDialogService.GetIntAsync(String, String, Int32)
+  name.vb: GetIntAsync(String, String, Integer)
+  fullName: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.GetIntAsync(string, string, int)
+  fullName.vb: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.GetIntAsync(String, String, Integer)
+  nameWithType: ObservableDialogService.GetIntAsync(string, string, int)
+  nameWithType.vb: ObservableDialogService.GetIntAsync(String, String, Integer)
 - uid: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.GetIntAsync*
   name: GetIntAsync
   href: api/PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.html#PolyhydraGames_BlazorComponents_Dialog_ObservableDialogService_GetIntAsync_
@@ -867,11 +1414,14 @@ references:
   fullName: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.GetIntAsync
   nameWithType: ObservableDialogService.GetIntAsync
 - uid: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.GetStringAsync(System.String,System.String,System.String,System.String)
-  name: GetStringAsync(String, String, String, String)
+  name: GetStringAsync(string, string, string, string)
   href: api/PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.html#PolyhydraGames_BlazorComponents_Dialog_ObservableDialogService_GetStringAsync_System_String_System_String_System_String_System_String_
   commentId: M:PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.GetStringAsync(System.String,System.String,System.String,System.String)
-  fullName: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.GetStringAsync(System.String, System.String, System.String, System.String)
-  nameWithType: ObservableDialogService.GetStringAsync(String, String, String, String)
+  name.vb: GetStringAsync(String, String, String, String)
+  fullName: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.GetStringAsync(string, string, string, string)
+  fullName.vb: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.GetStringAsync(String, String, String, String)
+  nameWithType: ObservableDialogService.GetStringAsync(string, string, string, string)
+  nameWithType.vb: ObservableDialogService.GetStringAsync(String, String, String, String)
 - uid: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.GetStringAsync*
   name: GetStringAsync
   href: api/PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.html#PolyhydraGames_BlazorComponents_Dialog_ObservableDialogService_GetStringAsync_
@@ -886,21 +1436,24 @@ references:
   isSpec: "True"
   fullName: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.InputBoxAsync
   nameWithType: ObservableDialogService.InputBoxAsync
-- uid: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.InputBoxAsync``1(System.String,IEnumerable{``0})
-  name: InputBoxAsync<T>(String, IEnumerable<T>)
-  href: api/PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.html#PolyhydraGames_BlazorComponents_Dialog_ObservableDialogService_InputBoxAsync__1_System_String_IEnumerable___0__
-  commentId: M:PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.InputBoxAsync``1(System.String,IEnumerable{``0})
+- uid: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.InputBoxAsync``1(System.String,System.Collections.Generic.IEnumerable{``0})
+  name: InputBoxAsync<T>(string, IEnumerable<T>)
+  href: api/PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.html#PolyhydraGames_BlazorComponents_Dialog_ObservableDialogService_InputBoxAsync__1_System_String_System_Collections_Generic_IEnumerable___0__
+  commentId: M:PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.InputBoxAsync``1(System.String,System.Collections.Generic.IEnumerable{``0})
   name.vb: InputBoxAsync(Of T)(String, IEnumerable(Of T))
-  fullName: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.InputBoxAsync<T>(System.String, IEnumerable<T>)
-  fullName.vb: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.InputBoxAsync(Of T)(System.String, IEnumerable(Of T))
-  nameWithType: ObservableDialogService.InputBoxAsync<T>(String, IEnumerable<T>)
+  fullName: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.InputBoxAsync<T>(string, System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.InputBoxAsync(Of T)(String, System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: ObservableDialogService.InputBoxAsync<T>(string, IEnumerable<T>)
   nameWithType.vb: ObservableDialogService.InputBoxAsync(Of T)(String, IEnumerable(Of T))
 - uid: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.NotificationAsync(System.String,System.String,System.String)
-  name: NotificationAsync(String, String, String)
+  name: NotificationAsync(string, string, string)
   href: api/PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.html#PolyhydraGames_BlazorComponents_Dialog_ObservableDialogService_NotificationAsync_System_String_System_String_System_String_
   commentId: M:PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.NotificationAsync(System.String,System.String,System.String)
-  fullName: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.NotificationAsync(System.String, System.String, System.String)
-  nameWithType: ObservableDialogService.NotificationAsync(String, String, String)
+  name.vb: NotificationAsync(String, String, String)
+  fullName: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.NotificationAsync(string, string, string)
+  fullName.vb: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.NotificationAsync(String, String, String)
+  nameWithType: ObservableDialogService.NotificationAsync(string, string, string)
+  nameWithType.vb: ObservableDialogService.NotificationAsync(String, String, String)
 - uid: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.NotificationAsync*
   name: NotificationAsync
   href: api/PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.html#PolyhydraGames_BlazorComponents_Dialog_ObservableDialogService_NotificationAsync_
@@ -922,11 +1475,14 @@ references:
   fullName: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.OnDialogRequest
   nameWithType: ObservableDialogService.OnDialogRequest
 - uid: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.ToastAsync(System.String)
-  name: ToastAsync(String)
+  name: ToastAsync(string)
   href: api/PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.html#PolyhydraGames_BlazorComponents_Dialog_ObservableDialogService_ToastAsync_System_String_
   commentId: M:PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.ToastAsync(System.String)
-  fullName: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.ToastAsync(System.String)
-  nameWithType: ObservableDialogService.ToastAsync(String)
+  name.vb: ToastAsync(String)
+  fullName: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.ToastAsync(string)
+  fullName.vb: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.ToastAsync(String)
+  nameWithType: ObservableDialogService.ToastAsync(string)
+  nameWithType.vb: ObservableDialogService.ToastAsync(String)
 - uid: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.ToastAsync*
   name: ToastAsync
   href: api/PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.html#PolyhydraGames_BlazorComponents_Dialog_ObservableDialogService_ToastAsync_
@@ -934,6 +1490,245 @@ references:
   isSpec: "True"
   fullName: PolyhydraGames.BlazorComponents.Dialog.ObservableDialogService.ToastAsync
   nameWithType: ObservableDialogService.ToastAsync
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs
+  name: RichDialogs
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html
+  commentId: T:PolyhydraGames.BlazorComponents.Dialog.RichDialogs
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs
+  nameWithType: RichDialogs
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.#ctor
+  name: RichDialogs()
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs__ctor
+  commentId: M:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.#ctor
+  name.vb: New()
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.RichDialogs()
+  fullName.vb: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.New()
+  nameWithType: RichDialogs.RichDialogs()
+  nameWithType.vb: RichDialogs.New()
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.#ctor*
+  name: RichDialogs
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs__ctor_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.RichDialogs
+  fullName.vb: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.New
+  nameWithType: RichDialogs.RichDialogs
+  nameWithType.vb: RichDialogs.New
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  name: BuildRenderTree(RenderTreeBuilder)
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_BuildRenderTree_Microsoft_AspNetCore_Components_Rendering_RenderTreeBuilder_
+  commentId: M:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)
+  nameWithType: RichDialogs.BuildRenderTree(RenderTreeBuilder)
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.BuildRenderTree*
+  name: BuildRenderTree
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_BuildRenderTree_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.BuildRenderTree
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.BuildRenderTree
+  nameWithType: RichDialogs.BuildRenderTree
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.CancelDialog
+  name: CancelDialog()
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_CancelDialog
+  commentId: M:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.CancelDialog
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.CancelDialog()
+  nameWithType: RichDialogs.CancelDialog()
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.CancelDialog*
+  name: CancelDialog
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_CancelDialog_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.CancelDialog
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.CancelDialog
+  nameWithType: RichDialogs.CancelDialog
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Dispose
+  name: Dispose()
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_Dispose
+  commentId: M:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Dispose
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Dispose()
+  nameWithType: RichDialogs.Dispose()
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Dispose*
+  name: Dispose
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_Dispose_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Dispose
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Dispose
+  nameWithType: RichDialogs.Dispose
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Items
+  name: Items
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_Items
+  commentId: P:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Items
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Items
+  nameWithType: RichDialogs.Items
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Items*
+  name: Items
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_Items_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Items
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Items
+  nameWithType: RichDialogs.Items
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Message
+  name: Message
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_Message
+  commentId: P:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Message
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Message
+  nameWithType: RichDialogs.Message
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Message*
+  name: Message
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_Message_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Message
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Message
+  nameWithType: RichDialogs.Message
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.NegativeButton
+  name: NegativeButton
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_NegativeButton
+  commentId: P:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.NegativeButton
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.NegativeButton
+  nameWithType: RichDialogs.NegativeButton
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.NegativeButton*
+  name: NegativeButton
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_NegativeButton_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.NegativeButton
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.NegativeButton
+  nameWithType: RichDialogs.NegativeButton
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.NegativeCommand
+  name: NegativeCommand
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_NegativeCommand
+  commentId: P:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.NegativeCommand
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.NegativeCommand
+  nameWithType: RichDialogs.NegativeCommand
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.NegativeCommand*
+  name: NegativeCommand
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_NegativeCommand_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.NegativeCommand
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.NegativeCommand
+  nameWithType: RichDialogs.NegativeCommand
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.OnInitializedAsync
+  name: OnInitializedAsync()
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_OnInitializedAsync
+  commentId: M:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.OnInitializedAsync
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.OnInitializedAsync()
+  nameWithType: RichDialogs.OnInitializedAsync()
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.OnInitializedAsync*
+  name: OnInitializedAsync
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_OnInitializedAsync_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.OnInitializedAsync
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.OnInitializedAsync
+  nameWithType: RichDialogs.OnInitializedAsync
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.PositiveButton
+  name: PositiveButton
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_PositiveButton
+  commentId: P:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.PositiveButton
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.PositiveButton
+  nameWithType: RichDialogs.PositiveButton
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.PositiveButton*
+  name: PositiveButton
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_PositiveButton_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.PositiveButton
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.PositiveButton
+  nameWithType: RichDialogs.PositiveButton
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.PositiveCommand
+  name: PositiveCommand
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_PositiveCommand
+  commentId: P:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.PositiveCommand
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.PositiveCommand
+  nameWithType: RichDialogs.PositiveCommand
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.PositiveCommand*
+  name: PositiveCommand
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_PositiveCommand_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.PositiveCommand
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.PositiveCommand
+  nameWithType: RichDialogs.PositiveCommand
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Request
+  name: Request
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_Request
+  commentId: P:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Request
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Request
+  nameWithType: RichDialogs.Request
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Request*
+  name: Request
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_Request_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Request
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Request
+  nameWithType: RichDialogs.Request
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.SelectionCommand
+  name: SelectionCommand
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_SelectionCommand
+  commentId: P:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.SelectionCommand
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.SelectionCommand
+  nameWithType: RichDialogs.SelectionCommand
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.SelectionCommand*
+  name: SelectionCommand
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_SelectionCommand_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.SelectionCommand
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.SelectionCommand
+  nameWithType: RichDialogs.SelectionCommand
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.ShowTest
+  name: ShowTest()
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_ShowTest
+  commentId: M:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.ShowTest
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.ShowTest()
+  nameWithType: RichDialogs.ShowTest()
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.ShowTest*
+  name: ShowTest
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_ShowTest_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.ShowTest
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.ShowTest
+  nameWithType: RichDialogs.ShowTest
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Title
+  name: Title
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_Title
+  commentId: P:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Title
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Title
+  nameWithType: RichDialogs.Title
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Title*
+  name: Title
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_Title_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Title
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Title
+  nameWithType: RichDialogs.Title
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Type
+  name: Type
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_Type
+  commentId: P:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Type
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Type
+  nameWithType: RichDialogs.Type
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Type*
+  name: Type
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_Type_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Type
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Type
+  nameWithType: RichDialogs.Type
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Value
+  name: Value
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_Value
+  commentId: P:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Value
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Value
+  nameWithType: RichDialogs.Value
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Value*
+  name: Value
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs_Value_
+  commentId: Overload:PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Value
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs.Value
+  nameWithType: RichDialogs.Value
+- uid: PolyhydraGames.BlazorComponents.Dialog.RichDialogs._modal
+  name: _modal
+  href: api/PolyhydraGames.BlazorComponents.Dialog.RichDialogs.html#PolyhydraGames_BlazorComponents_Dialog_RichDialogs__modal
+  commentId: F:PolyhydraGames.BlazorComponents.Dialog.RichDialogs._modal
+  fullName: PolyhydraGames.BlazorComponents.Dialog.RichDialogs._modal
+  nameWithType: RichDialogs._modal
 - uid: PolyhydraGames.BlazorComponents.QueryStrings
   name: PolyhydraGames.BlazorComponents.QueryStrings
   href: api/PolyhydraGames.BlazorComponents.QueryStrings.html
@@ -950,21 +1745,30 @@ references:
   name: QueryStringParameterAttribute()
   href: api/PolyhydraGames.BlazorComponents.QueryStrings.QueryStringParameterAttribute.html#PolyhydraGames_BlazorComponents_QueryStrings_QueryStringParameterAttribute__ctor
   commentId: M:PolyhydraGames.BlazorComponents.QueryStrings.QueryStringParameterAttribute.#ctor
+  name.vb: New()
   fullName: PolyhydraGames.BlazorComponents.QueryStrings.QueryStringParameterAttribute.QueryStringParameterAttribute()
+  fullName.vb: PolyhydraGames.BlazorComponents.QueryStrings.QueryStringParameterAttribute.New()
   nameWithType: QueryStringParameterAttribute.QueryStringParameterAttribute()
+  nameWithType.vb: QueryStringParameterAttribute.New()
 - uid: PolyhydraGames.BlazorComponents.QueryStrings.QueryStringParameterAttribute.#ctor(System.String)
-  name: QueryStringParameterAttribute(String)
+  name: QueryStringParameterAttribute(string)
   href: api/PolyhydraGames.BlazorComponents.QueryStrings.QueryStringParameterAttribute.html#PolyhydraGames_BlazorComponents_QueryStrings_QueryStringParameterAttribute__ctor_System_String_
   commentId: M:PolyhydraGames.BlazorComponents.QueryStrings.QueryStringParameterAttribute.#ctor(System.String)
-  fullName: PolyhydraGames.BlazorComponents.QueryStrings.QueryStringParameterAttribute.QueryStringParameterAttribute(System.String)
-  nameWithType: QueryStringParameterAttribute.QueryStringParameterAttribute(String)
+  name.vb: New(String)
+  fullName: PolyhydraGames.BlazorComponents.QueryStrings.QueryStringParameterAttribute.QueryStringParameterAttribute(string)
+  fullName.vb: PolyhydraGames.BlazorComponents.QueryStrings.QueryStringParameterAttribute.New(String)
+  nameWithType: QueryStringParameterAttribute.QueryStringParameterAttribute(string)
+  nameWithType.vb: QueryStringParameterAttribute.New(String)
 - uid: PolyhydraGames.BlazorComponents.QueryStrings.QueryStringParameterAttribute.#ctor*
   name: QueryStringParameterAttribute
   href: api/PolyhydraGames.BlazorComponents.QueryStrings.QueryStringParameterAttribute.html#PolyhydraGames_BlazorComponents_QueryStrings_QueryStringParameterAttribute__ctor_
   commentId: Overload:PolyhydraGames.BlazorComponents.QueryStrings.QueryStringParameterAttribute.#ctor
   isSpec: "True"
+  name.vb: New
   fullName: PolyhydraGames.BlazorComponents.QueryStrings.QueryStringParameterAttribute.QueryStringParameterAttribute
+  fullName.vb: PolyhydraGames.BlazorComponents.QueryStrings.QueryStringParameterAttribute.New
   nameWithType: QueryStringParameterAttribute.QueryStringParameterAttribute
+  nameWithType.vb: QueryStringParameterAttribute.New
 - uid: PolyhydraGames.BlazorComponents.QueryStrings.QueryStringParameterAttribute.Name
   name: Name
   href: api/PolyhydraGames.BlazorComponents.QueryStrings.QueryStringParameterAttribute.html#PolyhydraGames_BlazorComponents_QueryStrings_QueryStringParameterAttribute_Name
@@ -1029,14 +1833,14 @@ references:
   isSpec: "True"
   fullName: PolyhydraGames.BlazorComponents.ReactiveExtensions.WhereNotNull
   nameWithType: ReactiveExtensions.WhereNotNull
-- uid: PolyhydraGames.BlazorComponents.ReactiveExtensions.WhereNotNull``1(IObservable{``0})
-  name: WhereNotNull<T>(IObservable<T>)
-  href: api/PolyhydraGames.BlazorComponents.ReactiveExtensions.html#PolyhydraGames_BlazorComponents_ReactiveExtensions_WhereNotNull__1_IObservable___0__
-  commentId: M:PolyhydraGames.BlazorComponents.ReactiveExtensions.WhereNotNull``1(IObservable{``0})
+- uid: PolyhydraGames.BlazorComponents.ReactiveExtensions.WhereNotNull``1(System.IObservable{``0})
+  name: WhereNotNull<T>(IObservable<T?>)
+  href: api/PolyhydraGames.BlazorComponents.ReactiveExtensions.html#PolyhydraGames_BlazorComponents_ReactiveExtensions_WhereNotNull__1_System_IObservable___0__
+  commentId: M:PolyhydraGames.BlazorComponents.ReactiveExtensions.WhereNotNull``1(System.IObservable{``0})
   name.vb: WhereNotNull(Of T)(IObservable(Of T))
-  fullName: PolyhydraGames.BlazorComponents.ReactiveExtensions.WhereNotNull<T>(IObservable<T>)
-  fullName.vb: PolyhydraGames.BlazorComponents.ReactiveExtensions.WhereNotNull(Of T)(IObservable(Of T))
-  nameWithType: ReactiveExtensions.WhereNotNull<T>(IObservable<T>)
+  fullName: PolyhydraGames.BlazorComponents.ReactiveExtensions.WhereNotNull<T>(System.IObservable<T?>)
+  fullName.vb: PolyhydraGames.BlazorComponents.ReactiveExtensions.WhereNotNull(Of T)(System.IObservable(Of T))
+  nameWithType: ReactiveExtensions.WhereNotNull<T>(IObservable<T?>)
   nameWithType.vb: ReactiveExtensions.WhereNotNull(Of T)(IObservable(Of T))
 - uid: PolyhydraGames.BlazorComponents.ViewModels
   name: PolyhydraGames.BlazorComponents.ViewModels
@@ -1128,3 +1932,22 @@ references:
   isSpec: "True"
   fullName: PolyhydraGames.BlazorComponents.ViewModels.ComponentViewModelBase.OnParametersSetAsync
   nameWithType: ComponentViewModelBase.OnParametersSetAsync
+- uid: PolyhydraGames.BlazorComponents._Imports
+  name: _Imports
+  href: api/PolyhydraGames.BlazorComponents._Imports.html
+  commentId: T:PolyhydraGames.BlazorComponents._Imports
+  fullName: PolyhydraGames.BlazorComponents._Imports
+  nameWithType: _Imports
+- uid: PolyhydraGames.BlazorComponents._Imports.Execute
+  name: Execute()
+  href: api/PolyhydraGames.BlazorComponents._Imports.html#PolyhydraGames_BlazorComponents__Imports_Execute
+  commentId: M:PolyhydraGames.BlazorComponents._Imports.Execute
+  fullName: PolyhydraGames.BlazorComponents._Imports.Execute()
+  nameWithType: _Imports.Execute()
+- uid: PolyhydraGames.BlazorComponents._Imports.Execute*
+  name: Execute
+  href: api/PolyhydraGames.BlazorComponents._Imports.html#PolyhydraGames_BlazorComponents__Imports_Execute_
+  commentId: Overload:PolyhydraGames.BlazorComponents._Imports.Execute
+  isSpec: "True"
+  fullName: PolyhydraGames.BlazorComponents._Imports.Execute
+  nameWithType: _Imports.Execute

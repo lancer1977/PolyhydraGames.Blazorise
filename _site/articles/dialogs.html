@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Using Dialogs in Core.Blazorise </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Using Dialogs in Core.Blazorise ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="using-dialogs-in-coreblazorise">Using Dialogs in Core.Blazorise</h1>
+
+<p>The Core.Blazorise library provides a reactive dialog system for Blazor applications. This guide covers setup and usage for alert, confirm, and prompt dialogs.</p>
+<h2 id="installation">Installation</h2>
+<p>Add the NuGet package to your Blazor project:</p>
+<pre><code class="lang-bash">dotnet add package PolyhydraGames.BlazorComponents
+</code></pre>
+<h2 id="service-registration">Service Registration</h2>
+<p>Register the dialog service in your <code>Program.cs</code> or <code>Startup.cs</code>:</p>
+<pre><code class="lang-csharp">using PolyhydraGames.BlazorComponents.Dialog;
+
+// In your service registration
+services.AddPolyDialogs();
+</code></pre>
+<p>This registers <code>IObservableDialogService</code> as a scoped service.</p>
+<h2 id="adding-the-dialog-component">Adding the Dialog Component</h2>
+<p>Place the <code>RichDialogs</code> component at the top level of your application, typically in <code>MainLayout.razor</code> or <code>App.razor</code>:</p>
+<pre><code class="lang-razor">@layout MainLayout
+
+&lt;RichDialogs /&gt;
+
+&lt;!-- rest of your app --&gt;
+</code></pre>
+<p>The <code>RichDialogs</code> component subscribes to <code>OnDialogRequest</code> and displays modal dialogs as needed.</p>
+<h2 id="using-the-dialog-service">Using the Dialog Service</h2>
+<p>Inject <code>IObservableDialogService</code> where you need dialogs:</p>
+<pre><code class="lang-csharp">@inject IObservableDialogService DialogService
+</code></pre>
+<h3 id="alert-dialog">Alert Dialog</h3>
+<p>Show a simple notification:</p>
+<pre><code class="lang-csharp">await DialogService.NotificationAsync(&quot;Operation completed successfully!&quot;);
+await DialogService.NotificationAsync(&quot;File saved.&quot;, title: &quot;Success&quot;);
+</code></pre>
+<h3 id="confirm-dialog">Confirm Dialog</h3>
+<p>Get user confirmation before an action:</p>
+<pre><code class="lang-csharp">var result = await DialogService.GetBooleanAsync(
+    message: &quot;Are you sure you want to delete this item?&quot;,
+    title: &quot;Confirm Delete&quot;,
+    confirmButton: &quot;Delete&quot;,
+    labelCancel: &quot;Cancel&quot;
+);
+
+if (result.Ok)
+{
+    // User confirmed - proceed with deletion
+    await DeleteItemAsync();
+}
+</code></pre>
+<h3 id="prompt-for-text">Prompt for Text</h3>
+<p>Ask the user for a text input:</p>
+<pre><code class="lang-csharp">var result = await DialogService.GetStringAsync(
+    message: &quot;Enter your name:&quot;,
+    title: &quot;Name Required&quot;,
+    labelOk: &quot;Submit&quot;,
+    labelCancel: &quot;Skip&quot;
+);
+
+if (result.Ok)
+{
+    var name = result.Result;
+    // Use the entered name
+}
+</code></pre>
+<h3 id="prompt-for-integer">Prompt for Integer</h3>
+<p>Get an integer value from the user:</p>
+<pre><code class="lang-csharp">var result = await DialogService.GetIntAsync(
+    title: &quot;Quantity&quot;,
+    message: &quot;Enter the quantity:&quot;,
+    def: 1
+);
+
+if (result.Ok)
+{
+    var quantity = result.Result;
+}
+</code></pre>
+<h3 id="selection-dialog">Selection Dialog</h3>
+<p>Let the user pick from a list of options:</p>
+<pre><code class="lang-csharp">var options = new[] { &quot;Option A&quot;, &quot;Option B&quot;, &quot;Option C&quot; };
+var result = await DialogService.InputBoxAsync(&quot;Choose an option&quot;, options);
+
+if (result.Ok)
+{
+    var selected = result.Result;
+}
+</code></pre>
+<h2 id="dialog-request-types">Dialog Request Types</h2>
+<p>The <code>DialogRequestType</code> enum defines available dialog types:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Alert</code></td>
+<td>Simple notification with OK button</td>
+</tr>
+<tr>
+<td><code>Confirm</code></td>
+<td>Yes/No confirmation</td>
+</tr>
+<tr>
+<td><code>Prompt</code></td>
+<td>Text input with OK/Cancel</td>
+</tr>
+<tr>
+<td><code>PromptInt</code></td>
+<td>Integer input with OK/Cancel</td>
+</tr>
+<tr>
+<td><code>Selection</code></td>
+<td>Pick from a list of items</td>
+</tr>
+</tbody>
+</table>
+<h2 id="integration-with-mvvm">Integration with MVVM</h2>
+<p>The dialog service works well with ReactiveUI and MVVM patterns:</p>
+<pre><code class="lang-csharp">public class MyViewModel : ReactiveObject
+{
+    private readonly IObservableDialogService _dialogs;
+    
+    public MyViewModel(IObservableDialogService dialogs)
+    {
+        _dialogs = dialogs;
+    }
+    
+    public async Task DeleteItemAsync()
+    {
+        var confirm = await _dialogs.GetBooleanAsync(
+            &quot;This action cannot be undone.&quot;,
+            &quot;Confirm Delete&quot;
+        );
+        
+        if (confirm.Ok)
+        {
+            // Proceed with deletion
+        }
+    }
+}
+</code></pre>
+<h2 id="error-handling">Error Handling</h2>
+<p>Wrap dialog calls in try/catch for robust error handling:</p>
+<pre><code class="lang-csharp">try
+{
+    await DialogService.NotificationAsync(&quot;Welcome!&quot;);
+}
+catch (Exception ex)
+{
+    Logger.LogError(ex, &quot;Dialog failed&quot;);
+}
+</code></pre>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><code>IObservableDialogService</code> interface - for reactive dialog handling</li>
+<li><code>ObservableDialogService</code> class - default implementation</li>
+<li><code>DialogRequestType</code> enum - available dialog types</li>
+<li><code>RichDialogs</code> component - Blazor component for rendering dialogs</li>
+</ul>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/lancer1977/PolyhydraGames.Blazorise/blob/main/articles/dialogs.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
