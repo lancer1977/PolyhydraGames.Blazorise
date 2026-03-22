@@ -1,9 +1,7 @@
-using System.Globalization;
+using System.Reflection;
 using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Primitives;
 using PolyhydraGames.BlazorComponents.QueryStrings;
-using Xunit;
 
 namespace BlazorComponents.Tests.QueryStrings;
 
@@ -36,6 +34,12 @@ public class QueryStringParameterExtensionsTests
 
         [QueryStringParameter("nullableGuidParam")]
         public Guid? NullableGuidParam { get; set; }
+    }
+
+    private class TestComponentWithImplicitName : ComponentBase
+    {
+        [QueryStringParameter]
+        public string? ImplicitNameParam { get; set; }
     }
 
     private enum TestEnum
@@ -231,6 +235,30 @@ public class QueryStringParameterExtensionsTests
 
         // Assert
         Assert.Equal(0, result);
+    }
+
+    [Fact]
+    public void ConvertValue_WithInvalidGuid_ThrowsFormatException()
+    {
+        var value = new StringValues("not-a-guid");
+
+        var ex = Assert.Throws<TargetInvocationException>(() => CallPrivateConvertValue(value, typeof(Guid)));
+        Assert.IsType<FormatException>(ex.InnerException);
+    }
+
+    [Fact]
+    public void GetQueryStringParameterName_WithoutExplicitName_UsesPropertyName()
+    {
+        var property = typeof(TestComponentWithImplicitName).GetProperty(nameof(TestComponentWithImplicitName.ImplicitNameParam));
+        Assert.NotNull(property);
+
+        var methodInfo = typeof(QueryStringParameterExtensions)
+            .GetMethod("GetQueryStringParameterName", BindingFlags.NonPublic | BindingFlags.Static);
+        Assert.NotNull(methodInfo);
+
+        var result = methodInfo.Invoke(null, new object[] { property! });
+
+        Assert.Equal(nameof(TestComponentWithImplicitName.ImplicitNameParam), result);
     }
 
     /// <summary>

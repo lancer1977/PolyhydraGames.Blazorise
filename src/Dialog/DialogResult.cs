@@ -13,6 +13,6 @@ public class DialogResult<T> : IDialogResult<T>
         Result = value;
         Ok = true;
     }
-    public T Result { get; set; }
+    public T Result { get; set; } = default!;
     public bool Ok { get; set; }
 }

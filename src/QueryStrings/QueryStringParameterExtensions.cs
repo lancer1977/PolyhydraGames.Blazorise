@@ -67,7 +67,10 @@ public static class QueryStringParameterExtensions
         {
             foreach ( var value in parameter.Value )
             {
-                newUri = QueryHelpers.AddQueryString( newUri, parameter.Key, value );
+                if ( value is not null )
+                {
+                    newUri = QueryHelpers.AddQueryString( newUri, parameter.Key, value );
+                }
             }
         }
 
@@ -138,7 +141,7 @@ public static class QueryStringParameterExtensions
         return typeof(T).GetProperties( BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance );
     }
 
-    private static string GetQueryStringParameterName( PropertyInfo property )
+    private static string? GetQueryStringParameterName( PropertyInfo property )
     {
         var attribute = property.GetCustomAttribute<QueryStringParameterAttribute>();
         if ( attribute == null )

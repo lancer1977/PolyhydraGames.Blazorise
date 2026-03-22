@@ -5,18 +5,21 @@
 public class DialogRequest
 {
     private DialogRequestType _type;
-    public TaskCompletionSource<DialogResult<string>> AsString { get; private set; }
-    public TaskCompletionSource<DialogResult<object>> AsSelection { get; private set; }
-    public TaskCompletionSource<DialogResult<int>> AsInt { get; private set; }
-    public TaskCompletionSource<DialogResult<bool>> AsBool { get; private set; }
-    public TaskCompletionSource AsTask { get; private set; }
-    public Task Task { get; private set; }
+    public TaskCompletionSource<DialogResult<string>>? AsString { get; private set; }
+    public TaskCompletionSource<DialogResult<object>>? AsSelection { get; private set; }
+    public TaskCompletionSource<DialogResult<int>>? AsInt { get; private set; }
+    public TaskCompletionSource<DialogResult<bool>>? AsBool { get; private set; }
+    public TaskCompletionSource? AsTask { get; private set; }
+    public Task Task { get; private set; } = Task.CompletedTask;
 
-    public string Title { get; set; }
-    public string Message { get; set; }
-    public List<object> Items { get; set; }
-    public string PositiveButton { get; set; }
-    public string NegativeButton { get; set; }
+    public string Title { get; set; } = string.Empty;
+    public string Message { get; set; } = string.Empty;
+    public List<object> Items { get; set; } = [];
+    public string PositiveButton { get; set; } = string.Empty;
+    public string NegativeButton { get; set; } = string.Empty;
+    public int? MinInt { get; set; }
+    public int? MaxInt { get; set; }
+    public int? DefaultInt { get; set; }
 
     public DialogRequestType Type
     {
@@ -54,27 +57,39 @@ public class DialogRequest
      
     public void SetSelection( object value )
     {
-        AsSelection.SetResult( new DialogResult<object>( value ) );
+        if ( AsSelection is null )
+            throw new InvalidOperationException( "Selection result requested for non-selection dialog type." );
+
+        AsSelection.TrySetResult( new DialogResult<object>( value ) );
     }
     public void SetResult( string value )
     {
-        AsString.SetResult( new DialogResult<string>( value ) );
+        if ( AsString is null )
+            throw new InvalidOperationException( "String result requested for non-prompt dialog type." );
+
+        AsString.TrySetResult( new DialogResult<string>( value ) );
     }
 
     public void SetResult( bool value )
     {
-        AsBool.SetResult( new DialogResult<bool>( value ) );
+        if ( AsBool is null )
+            throw new InvalidOperationException( "Boolean result requested for non-confirm dialog type." );
+
+        AsBool.TrySetResult( new DialogResult<bool>( value ) );
     }
 
-    public void SetResult( int value,bool cancelled = false)
+    public void SetResult( int value,bool cancelled = false )
     {
+        if ( AsInt is null )
+            throw new InvalidOperationException( "Int result requested for non-int dialog type." );
+
         if ( cancelled )
         {
-            AsInt.SetResult( new DialogResult<int>( value ) );
+            AsInt.TrySetResult( new DialogResult<int> { Result = value, Ok = false } );
         }
         else
         {
-            AsInt.SetResult( new DialogResult<int>( value ) );
+            AsInt.TrySetResult( new DialogResult<int>( value ) );
         }
      
     }
@@ -83,14 +98,17 @@ public class DialogRequest
 
     public void SetResult()
     {
-        AsTask.SetResult();
+        if ( AsTask is null )
+            throw new InvalidOperationException( "Void result requested for non-alert dialog type." );
+
+        AsTask.TrySetResult();
     }
     public void Cancel()
     {
-        AsTask?.SetResult();
-        AsBool?.SetResult( new DialogResult<bool>() );
-        AsString?.SetResult( new DialogResult<string>() );
-        AsInt?.SetResult( new DialogResult<int>() );
-        AsSelection?.SetResult( new DialogResult<object>() );
+        AsTask?.TrySetResult();
+        AsBool?.TrySetResult( new DialogResult<bool>() );
+        AsString?.TrySetResult( new DialogResult<string>() );
+        AsInt?.TrySetResult( new DialogResult<int>() );
+        AsSelection?.TrySetResult( new DialogResult<object>() );
     }
 }

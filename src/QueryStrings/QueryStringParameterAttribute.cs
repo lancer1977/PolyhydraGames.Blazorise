@@ -13,5 +13,5 @@ public sealed class QueryStringParameterAttribute : Attribute
     }
 
     /// <summary>Name of the query string parameter. It uses the property name by default.</summary>
-    public string Name { get; }
+    public string? Name { get; }
 }
