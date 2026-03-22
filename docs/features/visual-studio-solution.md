@@ -1,5 +1,5 @@
 ---
-title: Sub-module: images
+title: Visual Studio Solution
 status: done
 owner: @DreadBreadcrumb
 priority: high
@@ -9,6 +9,6 @@ updated: 2026-03-22
 tags: [feature, Core.Blazorise, existing]
 ---
 
-# Sub-module: images
+# Visual Studio Solution
 
-Existing implementation of Sub-module: images within the Core.Blazorise codebase.
+Existing implementation of Visual Studio Solution within the Core.Blazorise codebase.
