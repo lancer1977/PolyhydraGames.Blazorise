@@ -1,0 +1,41 @@
+@using MudBlazor
+
+<MudDialog>
+    <DialogContent>
+        @if ( Items.Count == 0 )
+        {
+            <MudText Typo="Typo.body2">No items available.</MudText>
+        }
+        else
+        {
+            <MudStack Spacing="1">
+                @foreach ( var item in Items )
+                {
+                    <MudButton Variant="Variant.Outlined" OnClick="() => Select(item)">
+                        @item.ToString()
+                    </MudButton>
+                }
+            </MudStack>
+        }
+    </DialogContent>
+    <DialogActions>
+        <MudButton Variant="Variant.Text" OnClick="Cancel">@NegativeButton</MudButton>
+    </DialogActions>
+</MudDialog>
+
+@code {
+    [CascadingParameter] private IMudDialogInstance MudDialog { get; set; } = default!;
+
+    [Parameter] public List<object> Items { get; set; } = [];
+    [Parameter] public string NegativeButton { get; set; } = "Cancel";
+
+    private void Select( object item )
+    {
+        MudDialog.Close( DialogResult.Ok( item ) );
+    }
+
+    private void Cancel()
+    {
+        MudDialog.Cancel();
+    }
+}

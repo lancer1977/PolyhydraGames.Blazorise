@@ -6,21 +6,18 @@ using PolyhydraGames.Core.Interfaces;
 namespace PolyhydraGames.BlazorComponents;
 
 /// <summary>
-/// Extension methods for building the blazorise options.
+/// Extension methods for registering dialog services.
 /// </summary>
 public static class Config
 {
     /// <summary>
-    /// Register blazorise and configures the default behaviour.
+    /// Registers the dialog abstractions and default implementation.
     /// </summary>
-    /// <param name="serviceCollection"></param>
-    /// <param name="configureOptions"></param>
-    /// <returns></returns>
     public static IServiceCollection AddPolyDialogs( this IServiceCollection serviceCollection )
     {
-        serviceCollection.AddSingleton<ObservableDialogService>();
-        serviceCollection.AddSingleton<IDialogService>(x=>x.GetRequiredService<ObservableDialogService>());
-        serviceCollection.AddSingleton<IObservableDialogService>( x => x.GetRequiredService<ObservableDialogService>() ); 
+        serviceCollection.AddScoped<MudDialogShimService>();
+        serviceCollection.AddScoped<IDialogService>( x => x.GetRequiredService<MudDialogShimService>() );
+
         return serviceCollection;
     }
 }

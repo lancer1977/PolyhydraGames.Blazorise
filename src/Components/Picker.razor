@@ -2,26 +2,19 @@
 
 @if (Items != null)
 {
-    <Column>
-        <label for="@_selectId">
-            <p>@Title</p>
-        </label>
-
-        <Select id="@_selectId"
-                TValue="T"
-                SelectedValue="_value"
-                SelectedValueChanged="OnValueChanged">
-            <SelectItem TValue="T" Value="@null">
-                @GetTitle(null)
-            </SelectItem>
+    <MudSelect T="T"
+               Label="@Title"
+               Value="_value"
+               ValueChanged="OnValueChanged"
+               Placeholder="@PlaceHolder"
+               Clearable="true">
             @foreach (var item in Items)
             {
-                <SelectItem TValue="T" Value="@item">
+                <MudSelectItem T="T" Value="@item">
                     @GetTitle(item)
-                </SelectItem>
+                </MudSelectItem>
             }
-        </Select>
-    </Column>
+    </MudSelect>
 }
 else
 {
@@ -30,7 +23,6 @@ else
 
 @code {
     private T? _value;
-    private readonly string _selectId = $"select_{Guid.NewGuid()}";
 
     public Picker()
     {
