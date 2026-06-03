@@ -1,6 +1,15 @@
 # Core.Blazorise
 A project focused on Core.Blazorise.
 
+## Tags
+
+- dotnet
+- core
+- core-blazorise
+- docs
+- blazorise
+- ui
+
 ## Overview
 This repository contains the Core.Blazorise project. It is designed to provide robust functionality and seamless integration within its ecosystem.
 

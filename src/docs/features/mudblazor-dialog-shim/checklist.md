@@ -17,9 +17,9 @@
 - [x] Add custom Mud dialog components for prompt/int and selection flows.
 
 ## Validation
-- [ ] Build package successfully.
-- [ ] Verify runtime behavior for Alert, Confirm, Prompt, PromptInt, and Selection dialogs.
+- [x] Build package successfully.
+- [x] Verify runtime behavior for Alert, Confirm, Prompt, PromptInt, and Selection dialogs.
 
 ## Follow-up
-- [ ] Add automated tests around cancel and close semantics.
+- [x] Add automated tests around cancel and close semantics.
 - [ ] Confirm all consuming apps are no longer depending on deleted Blazorise dialog components.
