@@ -42,6 +42,18 @@ public class QueryStringParameterExtensionsTests
         public string? ImplicitNameParam { get; set; }
     }
 
+    private class TestComponentWithStrings : ComponentBase
+    {
+        [QueryStringParameter("name")]
+        public string? Name { get; set; }
+
+        [QueryStringParameter("nullable")]
+        public int? Nullable { get; set; }
+
+        [QueryStringParameter("enabled")]
+        public bool Enabled { get; set; }
+    }
+
     private enum TestEnum
     {
         First,
@@ -261,16 +273,68 @@ public class QueryStringParameterExtensionsTests
         Assert.Equal(nameof(TestComponentWithImplicitName.ImplicitNameParam), result);
     }
 
+    [Fact]
+    public void QueryStringParameterAttribute_ConstructorsExposeOptionalName()
+    {
+        Assert.Null(new QueryStringParameterAttribute().Name);
+        Assert.Equal("alias", new QueryStringParameterAttribute("alias").Name);
+    }
+
+    [Fact]
+    public void SetParametersFromQueryString_AppliesMatchingParametersOnly()
+    {
+        var component = new TestComponentWithStrings();
+        var navigation = new TestNavigationManager("https://example.test/page?name=Demo&nullable=17&enabled=true&ignored=value");
+
+        component.SetParametersFromQueryString(navigation);
+
+        Assert.Equal("Demo", component.Name);
+        Assert.Equal(17, component.Nullable);
+        Assert.True(component.Enabled);
+    }
+
+    [Fact]
+    public void UpdateQueryString_WritesComponentValuesAndRemovesNulls()
+    {
+        var component = new TestComponentWithStrings
+        {
+            Name = "Changed Value",
+            Nullable = null,
+            Enabled = true
+        };
+        var navigation = new TestNavigationManager("https://example.test/page?name=Old&nullable=12&enabled=false&keep=yes");
+
+        component.UpdateQueryString(navigation);
+
+        Assert.Equal("https://example.test/page?name=Changed Value&enabled=True&keep=yes", navigation.LastNavigatedTo);
+    }
+
     /// <summary>
     /// Helper method to call the private ConvertValue method via reflection
     /// </summary>
     private static object? CallPrivateConvertValue(StringValues value, Type type)
     {
         var methodInfo = typeof(QueryStringParameterExtensions)
-            .GetMethod("ConvertValue", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static);
+            .GetMethod("ConvertValue", BindingFlags.NonPublic | BindingFlags.Static);
 
         Assert.NotNull(methodInfo);
 
         return methodInfo.Invoke(null, new object[] { value, type });
+    }
+
+    private sealed class TestNavigationManager : NavigationManager
+    {
+        public TestNavigationManager(string uri)
+        {
+            Initialize("https://example.test/", uri);
+            LastNavigatedTo = uri;
+        }
+
+        public string LastNavigatedTo { get; private set; }
+
+        protected override void NavigateToCore(string uri, bool forceLoad)
+        {
+            LastNavigatedTo = ToAbsoluteUri(uri).ToString();
+        }
     }
 }
