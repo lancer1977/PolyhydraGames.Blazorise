@@ -37,6 +37,21 @@ Detailed documentation can be found in the following sections:
 
 ## 🚦 Getting Started
 ```bash
-dotnet build
-dotnet run
+dotnet restore PolyhydraGames.BlazorComponents.sln
+dotnet build PolyhydraGames.BlazorComponents.sln --configuration Release --no-restore
+dotnet test PolyhydraGames.BlazorComponents.sln --configuration Release --no-restore --no-build --verbosity minimal
 ```
+
+## Validation and artifacts
+
+The native validation path is:
+
+```bash
+dotnet test PolyhydraGames.BlazorComponents.sln --configuration Release --verbosity minimal
+dotnet pack src/PolyhydraGames.BlazorComponents.csproj --configuration Release --no-build --output artifacts/package
+dotnet list PolyhydraGames.BlazorComponents.sln package --outdated
+```
+
+GitHub Actions restores, builds, tests, packs, and uploads the package outputs as the `core-blazorise-nuget` workflow artifact from `artifacts/package`. Tags matching `v*` publish `.nupkg` files to GitHub Packages using the built-in `GITHUB_TOKEN`; no extra repository secret is required.
+
+Current dependency drift is limited to `MudBlazor` 9.5.0 -> 9.6.0 and is tracked for a package-maintenance slice.

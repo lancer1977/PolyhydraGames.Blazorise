@@ -1,0 +1,45 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  test-pack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Restore
+        run: dotnet restore PolyhydraGames.BlazorComponents.sln
+
+      - name: Build
+        run: dotnet build PolyhydraGames.BlazorComponents.sln --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet test PolyhydraGames.BlazorComponents.sln --configuration Release --no-restore --no-build --verbosity minimal
+
+      - name: Pack
+        run: dotnet pack src/PolyhydraGames.BlazorComponents.csproj --configuration Release --no-build --output artifacts/package
+
+      - name: Upload NuGet package
+        uses: actions/upload-artifact@v4
+        with:
+          name: core-blazorise-nuget
+          path: artifacts/package/*
+          if-no-files-found: error
+
+      - name: Publish tagged package to GitHub Packages
+        if: startsWith(github.ref, 'refs/tags/')
+        run: dotnet nuget push "artifacts/package/*.nupkg" --source "https://nuget.pkg.github.com/lancer1977/index.json" --api-key "${{ secrets.GITHUB_TOKEN }}" --skip-duplicate
