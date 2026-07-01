@@ -1,7 +1,6 @@
 # Core.Blazorise Roadmaps
 
-Roadmap documentation for Core.Blazorise lives here.
+This local planning file has been migrated. GitHub Issues are the canonical tracker.
 
-## Active Roadmaps
-
-- [Version 1 roadmap](../roadmap/v1/README.md)
+Canonical GitHub issue: https://github.com/lancer1977/PolyhydraGames.Blazorise/issues/6
+Original source kind: roadmap
